@@ -1,0 +1,32 @@
+
+For watch all the configuration, watch the next video:
+
+    
+https://www.youtube.com/watch?v=tZTpKF2pkQo&t=2200s
+
+
+1.- Live Server     ->  go live in port 5500
+2.- htmltagwrap     ->  alt + w
+3.- autorename tag  ->  
+4.- bracket pair colorizer -> helps displaying in different colors the next characters that are commonly used " () [] {} "
+
+5.- prettier        -> code formatter -> ctrl  shift + p 
+6.- code run        -> Allows to run files inside VS
+7.- material icons  -> Prety icons!
+
+8.- dobri next -> themes for visual studio -> ctrl+shift+p -> theme >- preferences color -> choose a theme!
+
+
+
+Enable the option:
+    Editor: Word Wrap -> ON 
+
+This allows long text display in same line but indented!.
+
+
+
+
+
+
+
+
