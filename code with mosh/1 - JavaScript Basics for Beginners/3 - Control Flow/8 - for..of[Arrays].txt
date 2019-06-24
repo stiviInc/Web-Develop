@@ -1,0 +1,18 @@
+
+The for..of its use to iterate over the elements of an array
+
+This loop give us the vale of each position in an array not the index...
+
+
+Sintaxis:
+
+for(let nameIterator of nameArray)  console.log(nameIterator);  //This sentence will print every element in the array.... "The element not the index"....
+
+
+
+Example:
+
+const animals = ["dog","cat","cow"];
+
+for(let animal of animals) console.log(animal) ///This sentence will print every animal in the array...(In order)....
+

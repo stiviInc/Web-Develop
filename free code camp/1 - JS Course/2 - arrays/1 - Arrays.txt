@@ -1,0 +1,45 @@
+*** Un array puede contener diferentes tipos de datos e incluso puede contener array (array nested).
+
+---------------------------------------------------------------------------------------------
+*Creación de Arrays: 
+
+    - Crear un array simple (Unidimensional) con un String y un Numero:
+
+    var myArray = ["Jelou",6];
+
+    -Crear un nested array con arrays que contengan un String y un Numero
+
+    var myNestedArray = [["Jordan",23],["James",6]];
+
+---------------------------------------------------------------------------------------------
+*Manipulacion de los index de un array simple (Unidimensional)
+
+    -Acceder a las posiciones de un array para obtener su valor:
+
+        -Obtener el valor de la primera posicion del siguiente array:
+
+        var myArray = [1,2,3,4];
+
+        var value = myArray[0];
+
+    -Modificar el valor de la ultima posicion del array anterior por un 99:
+
+        myArray[myArray.length -1] = 99;
+
+---------------------------------------------------------------------------------------------
+*Manipulacion de los index de un array multidimensional
+
+    var multidimensionalArray = [[1,2,3],["uno","dos","tres"],[[4,"cuatro"][5,"cinco"],[6,"seis"]]];
+
+    -Obtener el valor del arreglo 2 de la posicion 3!
+    var value = multidimensionalArray[1][2];
+
+    -Obtener el valor del arreglo 3 de la posicion 2! ---> [ 6, 'seis' ]
+    var value2 = multidimensionalArray[2][1];
+
+
+    -De la misma posicion anterior obtener solamente el numero del arreglo ---> 6
+    var value3 = multidimensionalArray[2][1][0];
+    
+---------------------------------------------------------------------------------------------
+

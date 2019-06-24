@@ -1,0 +1,26 @@
+*Qué es el Scope?
+
+    El scope se refiere a la visibilidad de las variables!
+---------------------------------------------------------------------------------------------
+*Global Scope
+
+    Una variable de ambito global puede ser accesada desde cualquier sitio del código...
+    Si una variable no se crea con la keyword var, automaticamente tomara el ambito de global scope, lo cual provocará que se permita acceder desde cualquier parte del programa!
+
+    -Para que pueda ocurrir esta anomalía, ese necesario que primero se haya ejecutado la función donde se crea por error la variable global!
+
+---------------------------------------------------------------------------------------------
+*Local Scope
+
+    Este tipo de variable solamente son visibles dentro del ambito al que pertenecen, ya sea una función, etc...
+
+    No pueden ser reconocidas desde fuera de su ambito!
+
+---------------------------------------------------------------------------------------------
+
+            *Global Variables VS Local Variables
+
+    Javascript permite declarar con el mismo nombre una variable global y una local, cuando ocurre esto, la variable local tiene mayor precedencia que la global, es decir que cuando se invoca una función que maneja una variable local con el mismo nombre que una global, dicha función trabajará con el valor que tenga la variable local y no la global!.
+
+---------------------------------------------------------------------------------------------
+

@@ -1,0 +1,69 @@
+
+
+                        Use the Spread Operator to Evaluate Arrays In-Place
+
+        En código, el spread operator se maneja como ...nameArrToSpread
+
+                *Como buena practica se debe de utilizar el nombre del array a expandir!
+
+        Tal cual su traducción al español, el Spread Operator "expande" un array para poder ser  manipulado...
+
+                            ---------------------------------------------------------------------------------------------
+                            
+        En general, se pueden hacer las siguientes tareas aplicando el Spread Operator:
+
+            *Agregar elementos de un array existente a uno nuevo
+            *Pasar elementos de un array como argumentos a una funcion
+            *Copiar Arrays
+            *Concatenar arrays 
+
+
+                            ---------------------------------------------------------------------------------------------
+
+    *Agregar elementos de un array existente a uno nuevo
+
+            const arr1 = ["valor1","valor2,1,2,3];
+            const arr2 = ["valor3",4,5,6, ...arr1,"valor4"];
+
+                            ---------------------------------------------------------------------------------------------
+
+    *Pasar elementos de un array como argumentos a una funcion
+
+            function restTwoNums(a,b){
+                /*  
+                    Code to execute!
+                */
+            }
+
+            const sendThisArr = [2,3,4,2];
+            restTwoNums(...sendThisArr);
+
+        *** En esta tarea cabe resaltar que si la función admite menos parametros que todos los que tiene el array, solamente se recibiran los que la función permita...
+
+                        ---------------------------------------------------------------------------------------------
+
+    *Copiar Arrays
+
+            const copyThisArr = [1,2,3,4];
+            const newArr = [..const];
+
+        *** Para copiar un array se debe de tener especial cuidado en que el operador spread se aplique correctamente, como se puede ver en el ejemplo...
+        El operador debe de aplicarse dentro de [], esto debido a que al expandirse el array quedan los datos de manera individual, pero al estar dentro de los [] se indica que serán datos pertenicientes al nuevo array!....
+
+
+                        ---------------------------------------------------------------------------------------------
+
+    *Concatenar Arrays
+
+            const arr1 = [1,2,3,4];
+            const arr2 = [5,6,7,8];
+
+            arr1 = [...arr1, ...arr2];
+
+        *** Sucede exactamente lo mismo que al copiar un array, ambos operadores spread deben de ir dentro de los [] y separados por ,
+
+    
+    
+
+
+    

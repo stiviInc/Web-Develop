@@ -1,0 +1,9 @@
+For know what kind of type its a variable, we can use the keyword: typeof
+
+    Example:
+
+    let age = 30;
+    let name = "Stalin";
+
+    typeof age;      // -> Devolvera number
+    typeof name;    // -> Devolvera String

@@ -1,0 +1,24 @@
+*Equality Operator              --->      ==
+
+    En JS para comparar 2 tipos diferentes de datos, se debe de convertir un tipo a otro, esto se conoce como "Type Coercion"....
+
+    Este operador realiza dicha tarea, es decir, puede comparar un String con un number y dar true....
+
+    Ejemplos: 
+
+    1 == 1 // true          number == num    --->  it has to be true
+    1 == 2 // false         number != num    --->  it has to be false
+    1 == '1' // true        number == String ---> for most cases, it must be false
+    "3" == 3 // true        number == String ---> for most cases, it must be false
+    
+---------------------------------------------------------------------------------------------
+
+*Strict Equality Operator       --->    ===
+
+    Es la contraparte del Equality Operator, a diferencia de su contraparte que intenta convertir ambos valores a un mismo tipo para despues realizar la comparacion, el Strict Equality Operator no realiza dicha conversión...
+
+    Si los valores son de diferente tipo, serán considerados como diferentes y el Strict Equality Operator retornará un falso!
+
+
+    3 === 3 // true             number == num    --->  it has to be true
+    3 === '3' // false          number == String ---> for most cases, it must be false

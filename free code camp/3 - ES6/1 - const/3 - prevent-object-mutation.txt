@@ -1,0 +1,29 @@
+
+
+                ES6: Prevent Object Mutation
+
+    
+    the key word "const" doesnt protect data from mutation, but JS provides a function called freeze to prevent data mutation....
+
+    Once the object is frozen, the object properties cant be add,  update or delete it, any attempt at changing the object will be rejected without an error!....
+
+
+    Example: 
+
+
+    let obj = {
+        name:"FreeCodeCamp",
+        review:"Awesome"
+    };
+    Object.freeze(obj);
+    obj.review = "bad"; //will be ignored. Mutation not allowed
+    obj.newProp = "Test"; // will be ignored. Mutation not allowed
+    console.log(obj); 
+    // { name: "FreeCodeCamp", review:"Awesome"}
+---------------------------------------------------------------------------------------------
+
+    Exampple:
+
+    Object.freeze(ObjectName);
+
+---------------------------------------------------------------------------------------------

@@ -1,0 +1,31 @@
+                    
+
+                    Use Destructuring Assignment to Assign Variables from Nested Objects
+
+
+        Al igual que la deestructuración de objetos, para deestructurar objetos inmersos se procede de la siguiente manera:
+
+        const a = {
+            start: { x: 5, y: 6},
+            end: { x: 6, y: -9 }
+        };
+
+        const { start : { x: startX, y: startY }} = a;
+        console.log(startX, startY); // 5, 6
+
+        
+    In the example above, the variable start is assigned the value of a.start, which is also an object.
+
+
+    Sintaxis:
+
+    const obj = {
+        objNested1: {property1Obj1: val, propert2Obj2:val},
+        objNested2: {property1Obj2: val, property2Obj2: val}
+    }
+
+    //Deestructurar la propiedad 2 del Objeto Inmerso 2....
+
+    const {objNested2 {property2Obj2 : propObj2}} = obj;
+
+    console.log(propObj2);

@@ -1,0 +1,41 @@
+*** Objetos en JS
+
+    La manera de accesar a la información de un objeto es a traves de sus propiedades...
+
+    Ejemplo de un objeto:
+
+    var cat = {
+        "name": "Whiskers",
+        "legs": 4,
+        "tails": 1,
+        "enemies": ["Water", "Dogs"]
+    };
+
+    *** Prestar Atención al como se crea un objeto:
+
+    var nombreObjeto = {
+        propiedad1: valor,
+        propiedad2: valor,
+        propiedad3: valor,
+        "nombre de propiedad": valor
+    };
+---------------------------------------------------------------------------------------------
+    *** Notas mas reelevantes acerca de los objetos ***
+    
+    Las propiedades van dentro de las llaves que engloban el objeto.
+    La llave de cierra va acompañada de un ;
+    Despues del nombre de la propiedad se utilizan : para enseguida asignar el valor 
+    Entre cada propiedad se utiliza una , para separarlas
+    La ultima propiedad no lleva , al final
+
+    *Por ultimo cabe resaltar que el nombre de las propiedades puede contener espacios en blanco!
+
+
+    var nombreObjeto = {
+        propiedad: valor,
+        "nombre propiedad": valor
+    }
+---------------------------------------------------------------------------------------------
+
+    Tambien se pueden utilizar numeros como propiedades, sin embargo, si el objeto no tiene propiedades que no sean string, JS automaticamente las hara strings....
+

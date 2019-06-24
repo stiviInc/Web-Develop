@@ -1,0 +1,17 @@
+                                
+                                
+                                
+                                ES6: Write Concise Object Literal Declarations Using Simple Fields  
+
+
+            Consider the following code:
+
+            const getMousePosition = (x, y) => ({
+            x: x,
+            y: y
+            });
+
+
+            *** In ES6 it can be replaced for the followin easily code:
+
+                const getMousePosition = (x, y) => ({ x, y });

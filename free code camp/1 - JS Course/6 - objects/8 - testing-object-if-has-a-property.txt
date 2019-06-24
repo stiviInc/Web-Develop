@@ -1,0 +1,4 @@
+* JS ofrece un metodo para verificar si los objetos tienen definida X propiedad....
+
+Dicho metodo es: .hasOwnProperty(propName)
+y retorna true or false, dependiendo si el objeto contiene la propiedad indicada o no!

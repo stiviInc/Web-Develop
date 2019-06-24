@@ -1,0 +1,8 @@
+In JS there are the following data types:
+
+
+    -String
+    -number
+    -boolean
+    -undefined
+    -null

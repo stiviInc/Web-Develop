@@ -1,0 +1,21 @@
+
+
+                    Mutate an array declared with constanst
+
+    
+    if you know that a variable wont need to reassgined the value, the best practice its to declare it using const...
+
+    Altough a object(as arrays) are declared using const, they are still mutable, this means the info can be manipulate (update)... using const in object only prevents reassignment of the variable identifier....
+
+
+
+    Example:
+
+    "use strict";
+
+    const s = [5, 6, 7];
+    s = [1, 2, 3]; // throws error, trying to assign a const
+    s[2] = 45; // works just as it would with an array declared with var or let
+    console.log(s); // returns [5, 6, 45]
+
+---------------------------------------------------------------------------------------------

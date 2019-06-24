@@ -1,0 +1,5 @@
+In JS there are 3 references types:
+
+    - Objects
+    - Arrays
+    - Functions

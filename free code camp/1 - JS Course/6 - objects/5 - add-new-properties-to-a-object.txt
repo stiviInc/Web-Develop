@@ -1,0 +1,12 @@
+* Agregar nuevas propiedades (atributos) a un objeto ya creado...
+
+
+    Se realiza de la misma manera en la que se actualiza un objeto...
+    JS al tratar de actualizar la propiedad indicada y darse cuenta que no existe tal propiedad en el objeto, automaticamente la agregara al objeto!...
+
+    var obj = {
+        propiedad1: "valor1",
+        propiedad2: "valor2"
+    }
+
+    obj.propiedad3 = "propiedad3";

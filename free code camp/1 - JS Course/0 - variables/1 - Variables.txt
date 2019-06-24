@@ -1,0 +1,17 @@
+Existen 7 tipos de datos en JS:
+    *undefined
+    *null
+    *boolean
+    *string
+    *symbol
+    *number
+    *object
+
+---------------------------------------------------------------------------------------------
+Existen 3 maneras de declarar variables:
+
+    * var nameVariable = "";        // ---> Su alcance permite que se utilice durante todo el programa
+
+    * let nameVariable = "";        // ---> Solamente puede ser usada en la sección donde fue declarada
+
+    * const nameVariable = valor;   //Su valor nunca cambia, por eso es una constante!    

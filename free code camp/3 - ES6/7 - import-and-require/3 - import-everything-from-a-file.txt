@@ -1,0 +1,16 @@
+
+
+                                                ES6: Use * to Import Everything from a File
+
+        Like in Java, using the * when importing brings everycode available for be imported
+
+        It means, if X file exports 4 functions, when using * for import in a file Y, it inmediatly let you use the 4 functions....
+
+
+        Sintaxis:
+
+        import * as object_with_name_of_your_choice from "file_path_goes_here"
+
+        Use the imported function:
+        
+        object_with_name_of_your_choice.imported_function

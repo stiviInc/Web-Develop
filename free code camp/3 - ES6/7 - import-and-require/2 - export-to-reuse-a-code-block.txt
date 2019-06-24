@@ -1,0 +1,28 @@
+
+
+                                    ES6: Use export to Reuse a Code Block
+
+        In order for import code into a file, we have to export it first!
+
+        We can export functions and variables...
+
+                                                    ------------------------------------------
+
+        Example exporting a function and a variable independently
+
+        const capitalizeString = (string) => {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+        export { capitalizeString } //How to export functions.
+        export const foo = "bar"; //How to export variables.
+
+                                                    ------------------------------------------
+
+        Example exporting a function and a variable togheter
+
+        const capitalizeString = (string) => {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+        const foo = "bar";
+        
+        export{ capitalizeString, foo };

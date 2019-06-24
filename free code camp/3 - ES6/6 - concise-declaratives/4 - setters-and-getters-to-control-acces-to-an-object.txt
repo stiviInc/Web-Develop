@@ -1,0 +1,48 @@
+
+
+                        ES6: Use getters and setters to Control Access to an Object
+
+        
+        Sintaxis para declarar setters y getters:
+
+        class Book {
+            constructor(author) {
+                this._author = author;
+            }
+            // getter
+            get writer(){
+                return this._author;
+            }
+            // setter
+            set writer(updatedAuthor){
+                this._author = updatedAuthor;
+            }
+        }
+        
+
+        Sintaxis para utilizar los setters y getters:
+
+        const lol = new Book('anonymous');
+        console.log(lol.writer);  // anonymous      --> get
+        lol.writer = 'wut';                       //--> set
+        console.log(lol.writer);  // wut          //--> get
+
+            
+            *** Como se puede observar, para utilizar los setter y getters no es necesario tratarlos como si fuesen funciones.
+            Simplemente se utiliza el nombre del objeto seguido de un punto y el nombre que se le definio al set o get en el objeto...
+
+            Y si es un set, pues enviar el valor que se asignará, y si es un get estar preparado para tratar el dato que se recibirá!...
+
+
+    *** Nota ***
+
+    Tener cuidado con el nombre de los setter y getter, no deben de tener el mismo nombre de la variable del objeto con la que van a trabajar....
+    Es recomendable poner set o get al principio y enseguida el nombre de la variable... Por ejemplo:
+
+                set y get para la variable peso:
+
+                        set setPeso(peso){this.peso = peso;}
+
+                        get getPeso(){return this.peso;}
+
+

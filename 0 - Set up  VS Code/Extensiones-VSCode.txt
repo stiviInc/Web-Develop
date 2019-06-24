@@ -10,7 +10,7 @@ https://www.youtube.com/watch?v=tZTpKF2pkQo&t=2200s
 3.- autorename tag  ->  
 4.- bracket pair colorizer -> helps displaying in different colors the next characters that are commonly used " () [] {} "
 
-5.- prettier        -> code formatter -> ctrl  shift + p 
+5.- prettier        -> code formatter -> ctrl  shift + p ===> shift + alt + f
 6.- code run        -> Allows to run files inside VS
 7.- material icons  -> Prety icons!
 

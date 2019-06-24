@@ -1,0 +1,17 @@
+Ternary Operator or Conditional Operator
+
+This operator allows us to assign a value depending in a condicion...
+If the condition evaluatio's is true, the value will be the following after the "?" operator, but if the result is false, the value will be the following after the ":"
+
+Sintaxis:
+
+let nameVar = conditionToEvaluate ? resultIfTrue : resultIfFalse;
+
+
+Example:
+
+//Assign "approved" if the score is more than 70, otherwise, assign "failed"
+
+let score = 75;
+let status = score > 70 ? "approved" : "failed";
+

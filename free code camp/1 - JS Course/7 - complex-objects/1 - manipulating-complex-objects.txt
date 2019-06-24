@@ -1,0 +1,21 @@
+* Los objetos de JS permiten manejar informacion flexible para diferentes combinaciones de tipos de datos, arrays, funciones y objetos...
+
+Un ejemplo "sencillo" de un objeto complejo sería el siguiente:
+
+-Un array que contiene un objeto adentro!
+-El objeto  contiene Strings, numbers and a nested array!...
+
+            var ourMusic = [
+            {
+                "artist": "Daft Punk",
+                "title": "Homework",
+                "release_year": 1997,
+                "formats": [ 
+                "CD", 
+                "Cassette", 
+                "LP"
+                ],
+                "gold": true
+            }
+            ];
+

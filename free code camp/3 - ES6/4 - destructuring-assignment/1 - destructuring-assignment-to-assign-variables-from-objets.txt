@@ -1,0 +1,35 @@
+
+
+                    Use Destructuring Assignment to Assign Variables from Objects
+
+
+        Es una sintaxis espcial de asignar valores tomados directamente de un objecto a una variable!
+
+        Por ejemplo:
+
+        var voxel = {x: 3.6, y: 7.4, z: 6.54 };
+
+        const { x, y, z } = voxel; // x = 3.6, y = 7.4, z = 6.54
+
+        //Se estan declarando las variables x, y, z y se le esta asignando al objeto voxel, dicho objeto contiene las variables x,y,z con valores definidos... por lo tanto las variables que se estan declarando tomaran los valores correspondientes de las variables del objeto!
+
+
+        *** Pero en caso de que se quiera asignar el valor de las variables del objeto a variables con nombres diferentes, se realiza de la siguiente manera:
+
+        //Sintaxis....
+        const {varObj : newVar} = obj;
+        
+
+        //Ejemplo considerando el mismo objeto anterior!
+        const { x : a, y : b, z : c } = voxel // a = 3.6, b = 7.4, c = 6.54
+
+        *Explicación: Se debe de leer de la siguiente manera, toma el valor de la variable del objeto : asigna dicho valor a esta variable....
+        .... Por ejemplo en la variable a se lee: toma el valor de x y asingalo en a 
+                                                   toma el valor de y y asignalo en b
+                                                    toma el valor de z y asignalo en c 
+
+        
+
+        *** Nota final: No es necesario asignar todas las variables que contiene el objeto, puede asignarse especificamente una o  mas variables, dependiendo lo que se requiera!.
+
+        

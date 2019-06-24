@@ -1,0 +1,33 @@
+Al trabajar con strings se pueden utilizar los siguientes escape character:
+
+                \'      single quote
+                \"      doublue quote
+                \\      backslash
+                \n      new linew
+                \r      carriage return
+                \t      tab 
+                \b      backspace
+                \f      form feed
+---------------------------------------------------------------------------------------------
+    Los Strings son inmutables, esto significa que no pueden ALTERARSE una vez creados. Es decir: el contenido que tiene un string no puede ser alterado individualemente, como por ejemplo cambiar una o varias letras, la unica manera de poder MODIFICAR un string es reasignando un nuevo valor a la variable!.
+
+Ejemplo Incorrecto:
+    var myStr = "Bob";
+    myStr[0] = "J";
+
+Ejemplo Correcto:
+    var myStr = "Bob";
+    myStr = "Job";
+
+---------------------------------------------------------------------------------------------
+    *** Obtener especificamente un caracter de un String ***
+
+    Se utilizan los [] ...
+
+    Ej:
+        var myName = "Stalin";
+        //Para obtener la S 
+        var firstLetter = myName[0];
+        
+---------------------------------------------------------------------------------------------
+    

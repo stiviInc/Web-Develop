@@ -1,0 +1,21 @@
+
+
+                        ES6: Use class Syntax to Define a Constructor Function
+
+
+            La "class" sintaxis es solo una sintaxis, no tiene implementaciones de POO tales como en java,python,etc...
+
+            La "class" sintaxis reemplaza la creacion de la función del Constructor....
+
+            La "class" keyword declara una nueva función, y el Constructor fue agregado , el cual será invocado cuando "new" sea llamado para crear un nuevo objeto!....
+
+
+            Example:
+
+
+        class SpaceShuttle {
+            constructor(targetPlanet){
+                this.targetPlanet = targetPlanet;
+            }
+        }
+        const zeus = new SpaceShuttle('Jupiter');

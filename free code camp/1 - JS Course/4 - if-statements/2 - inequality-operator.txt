@@ -1,0 +1,25 @@
+* Inequality Operator       --->  !=
+
+    Es lo contrario al Equality Operator, a si mismo, este operador convierte los tipos de datos al momento de realizar la comparación
+
+    Examples:
+
+    1 != 2 // true
+    1 != "1" // false
+    1 != '1' // false
+    1 != true // false
+    0 != false // false
+
+---------------------------------------------------------------------------------------------
+
+* Strict Inequality Operator    --->    !==
+
+    Al igual que el Strict Equality Operator, este operador no convierte los tipos de datos cuando se realiza la comparación
+
+    Examples:
+
+    3 !== 3 // false
+    3 !== '3' // true
+    4 !== 3 // true
+
+    

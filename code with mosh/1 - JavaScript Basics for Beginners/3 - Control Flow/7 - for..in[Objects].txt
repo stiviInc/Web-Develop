@@ -1,0 +1,29 @@
+The for..if loop its very useful to iterate through a object and get all its properties...
+
+Its not suggested to use it in arrays... for arrays exist other kind of for loop called for.of
+                                        -----            
+    Sintaxis of for..if loop
+
+    for(let nameIterator in nameObject){
+
+    }   
+                                        -----
+
+    Description of how works the for..if loop
+
+    The for..if loop go through the object indicated after the "in" word and get each property in the "nameIterator" word... This means that every turn the for..in will get the following property of the object...
+
+                                        -----
+    Example:
+
+    let person ={
+        name : "Stalin",
+        age : 22,
+        sex: "male"
+    }
+
+    for(let key in person) console.log(key)   // ---> This sentence will get the name of the property...not the value....for be able of acces the value, we have to use the bracket notation....
+
+    //Accesing the value in each iteration
+
+    for(let key in person) console.log(person[key]);    //---> This sentence will print the value of each property...

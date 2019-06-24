@@ -1,0 +1,20 @@
+
+        * parseInt() function!
+
+The parseInt() function parses a string and returns an integer. Here's an example:
+
+var a = parseInt("007");
+
+The above function converts the string "007" to an integer 7. If the first character in the string can't be converted into a number, then it returns NaN.
+
+---------------------------------------------------------------------------------------------
+
+
+    *Usar parseInt(number,radix) para convertir el string recibido a entero pero indicandole la base del numero... es decir, puede ser base 2(binario)
+    
+    Por ejemplo :
+
+    var a = parseInt("11", 2);
+
+    The radix variable says that "11" is in the binary system, or base 2. This example converts the string "11" to an integer 3.
+

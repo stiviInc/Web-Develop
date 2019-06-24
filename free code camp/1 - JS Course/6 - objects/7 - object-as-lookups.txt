@@ -1,0 +1,23 @@
+*Se pueden utilizar objetos para almacenar informacion tabular, osea información de tipo :
+    key -> value
+como un tipo de diccionario.
+
+
+    *Restricciones de acceso a la informacion:
+
+    La unica restricción es que solamente se puede acceder a la información a traves de los "[] " y no por medio del " . "
+
+    Ejemplo: 
+
+
+    var lookup = {
+        "alpha": "Adams",
+        "bravo": "Boston",
+        "charlie": "Chicago",
+        "delta": "Denver",
+        "echo": "Easy",
+        "foxtrot": "Frank"
+    };
+
+    var val = "alpha";
+    result = lookup[val];

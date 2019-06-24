@@ -1,0 +1,14 @@
+*Las funciones permiten retornar o no valores...
+
+    Ejemplo de una función que no retorna valor:
+
+    function nameFunction(arg1,arg2){
+        /*
+            *code here
+        */
+    }
+
+
+    *** Cuando una función no retorna un valor explicitamente, se maneja como undefined dicho retorno!
+
+---------------------------------------------------------------------------------------------

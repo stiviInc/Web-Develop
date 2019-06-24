@@ -1,0 +1,34 @@
+---------------------------------------------------------------------------------------------
+*Manipulación de arrays con push()
+
+    La función push() permite agregar al final del array el elemento que se indique...
+    Puede ser otro array, un numero, un string, etc...
+
+    var myArray = [1,2,3];
+    myArray.push(4);    //El array quedará de la siguient manera: [1,2,3,4]
+
+---------------------------------------------------------------------------------------------
+*Manipulación de arrays con pop()
+
+    La función pop() remueve la ultima posición del array y la retorna, lo cual permite asignar dicho valor removido a una variable.
+
+    var myArray = [1,2,3];
+    var removedElement = myArray.pop(); //Esta variable tendrá el valor de 3!
+
+---------------------------------------------------------------------------------------------
+*Manipulación de arrays con shift()
+
+    La función shift() remueve la primer posición del array, y al igual que pop(), retorna el valor removido para poder ser asignado a una variable si se requiere.
+
+    var myArray = [1,2,3,4];
+    var removedElement = myArray.shift()    //Esta variable tendrá el valor de 1
+
+---------------------------------------------------------------------------------------------
+*Manipulación de arrays con unshift()
+
+    La función unshift() permite agregar un elemento a la primera posición del array.
+
+    var myArray = [1,2,3];
+    myArray.unshift(0);     //El array quedará [0,1,2,3];
+
+---------------------------------------------------------------------------------------------

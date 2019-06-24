@@ -1,0 +1,28 @@
+
+
+                            ES6: Use Destructuring Assignment to Pass an Object as a Function's Parameters
+
+            Consider the code below:
+
+            const profileUpdate = (profileData) => {
+            const { name, age, nationality, location } = profileData;
+            // do something with these variables
+            }
+
+                    This effectively destructures the object sent into the function. 
+                    This can also be done in-place:
+
+            const profileUpdate = ({ name, age, nationality, location }) => {
+            /* do something with these fields */
+            }
+
+
+            ***This has the added benefit of not having to manipulate an entire object in a function; only the fields that are needed are copied inside the function.
+
+                                        ---------------------------------------------------------------------------------------------
+                                        
+            * Explicación....
+
+            Es posible realizar la deestructuracion de un objecto  como parametros de una función ya que cuando se invoca dicha función se le envía el objeto....
+            Es decir, la función recibe el objeto completo y solamente se envían los argumentos/parametros que se requieran donde sean requeridos!...
+

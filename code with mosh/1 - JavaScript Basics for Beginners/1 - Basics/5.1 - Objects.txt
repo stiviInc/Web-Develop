@@ -1,0 +1,34 @@
+
+
+Sintaxis for create an object:
+
+
+let nameObj = {
+    nameProp1 : val,
+    nameProp2: val
+}
+
+
+//Modify a prop object using dot notation
+
+nameObj.namePropToUpdate = newVal;
+
+
+//Modify a prop object using bracket notation
+
+nameObj['namePropToUpdate'] = newVal;
+
+
+    *Using this notation can give us more dynamism, like example:
+        If you dont know the exactly name of the prop, but you can select a option, you can assign the option's value and reuse it with this notation:
+
+        let namePropUsingDynamism = nameProp;
+        nameObj['namePropUsingDynamism'] = value;
+
+        Also this notation can be used when you are working with a for-in loop...
+
+        for(let key in obj){
+            console.log(obj[key]);
+        }
+
+        //The variable key have the exactly name of the propertys the object have!

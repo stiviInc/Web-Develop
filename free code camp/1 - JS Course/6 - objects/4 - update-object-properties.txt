@@ -1,0 +1,17 @@
+* Para actualizar los valores de las propiedades de un objeto se hace a traves de la notación de " . " o de "[]".... y la actualizacion se hace como si fuese una variable, es decir:
+
+
+
+var modelo = {
+    nombre: "ariana james",
+    apodo: "ary",
+    peso: "50 kg",
+    altura: "165 cm",
+    categoria: "fitness",
+    edad: 26
+}
+
+modelo.peso = "52 kg";  //De esta manera se actualizaría el valor de la propiedad peso!
+
+//Verificar el nuevo valor de la propiedad peso
+console.log(modelo.peso);

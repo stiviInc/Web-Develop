@@ -1,0 +1,27 @@
+    
+
+                                     Use the Rest Operator with Function Parameters
+
+    With the rest operator, you can create functions that take a variable number of arguments. These arguments are stored in an array that can be accessed later from inside the function.
+
+
+    El rest operator se encarga de empaquetar en un array todos los parametros que sean recibidos en una función, esto permite que se puedan recibir de manera dinamica el numero de parametros cada vez que la función sea utilizada!....
+
+
+    The rest operator eliminates the need to check the args array and allows us to apply map(), filter() and reduce() on the parameters array.
+
+
+      Example:
+
+      const sum = (function() {
+        "use strict";
+        return function sum(...args) {
+          return args.reduce((a, b) => a + b, 0);
+        };
+      })();
+      console.log(sum(1, 2, 3)); // 6
+
+    //* Explicación del ejemplo: La función suma trabaja con el rest operador, es decir que todos los parametros que reciba serán empaquetados en un array, lo cual permite que cada vez que la función sea invocada pueda variar el numero de parametros que la misma reciba!
+    Y para manipular los parametros se hace como si fuese un array, es decir... se pueden aplicar los metodos: map() , filter(), reduce() .....
+
+

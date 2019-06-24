@@ -1,0 +1,10 @@
+JS works with values named "truthy and falsy"... these values are different from false and true....
+
+
+List of Falsy Values:
+    - undefined
+    - null
+    - ''
+    - false
+    - 0
+    - NAN

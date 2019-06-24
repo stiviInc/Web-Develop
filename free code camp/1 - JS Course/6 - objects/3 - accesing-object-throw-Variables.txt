@@ -1,0 +1,17 @@
+*** Se accede a traves de los "[]", pero en vez de colocal el nombre de la propiedad directamente, lo que se realiza es que:
+
+    Se crea una variable en la cual se asigna el nombre de la propiedad a la que se desea acceder, y despues se utiliza dicha variable para acceder a la propiedad!...
+
+    Ejemplo:
+
+        var naves = {
+            yova: "VRU", aritos: "MMO", daniel: "MMO", "sin aros": "EIC"
+        };
+
+        var strongestShip = "yova";
+
+        var enterpriseOfMyStrongestShip = naves[strongestShip];
+
+        console.log(enterpriseOfMyStrongestShip);
+
+---------------------------------------------------------------------------------------------

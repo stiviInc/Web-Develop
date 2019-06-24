@@ -1,0 +1,29 @@
+---------------------------------------------------------------------------------------------
+                        let
+    
+    This new keyword was introduced with ES6 to solve the issee that "var" keyword cause.
+    The problem whit "var" is that it allow to declare more than one time the same variable...
+
+    Let only allows to declare one time with the same name a variable inside the same block of code...
+
+    It means: -> 1 variable with the same name can be declared just 1 time
+
+    Example of declaring bad a let variables:
+    
+    let camper = 'James';
+    let camper = 'David'; // throws an error
+
+
+    Example of declaring a let variable with same name but in diferent block (diferent scope)
+
+    let x = "";
+    if( 3 == 3){
+        let x = "another variable not another value";
+    }
+
+---------------------------------------------------------------------------------------------
+
+Note the "use strict". This enables Strict Mode, which catches common coding mistakes and "unsafe" actions. For instance:
+
+"use strict";
+x = 3.14; // throws an error because x is not declared

@@ -1,0 +1,11 @@
+                                            --------------
+
+                                Differences between for..of and map-function
+
+                The most important difference is that working with map function you cant interrupt or alter the cycle... this means, you cant use keywords as break or continue....
+
+                And in the other hand, working with for..of its possible to alter the iteration using that keywords.... break or continue
+
+                    This means, if you only need to acces all elements of an array without interrupt the cycle, its useful the map function, but if you need to acces the elements trying to find a exactly element and then alter or do something that needs to interrupt the cycle, you have to use the for..of !
+
+                                            --------------

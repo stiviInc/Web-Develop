@@ -1,0 +1,16 @@
+
+
+            Set Default Parameters for Your Functions
+
+    JS allows us to set default values for our Parameters, this helps a lot in case the function its invoque with no Parameters, so, the function will take the default parameter defined for work with.
+
+
+
+    const increment = (function() {
+    "use strict";
+    return function increment(number, value = 1) {
+        return number + value;
+    };
+    })();
+    console.log(increment(5, 2)); // returns 7
+    console.log(increment(5)); // returns 6

@@ -1,0 +1,14 @@
+*Para eliminar propiedades que contiene un objeto basta con poner le palabra reservada delete antes del nombre del objeto. propiedad-a-eliminar
+
+Ejemplo: 
+
+    var myDog = {
+        "name": "Happy Coder",
+        "legs": 4,
+        "tails": 1,
+        "friends": ["freeCodeCamp Campers"],
+        "bark": "woof"
+    };
+
+
+    delete myDog.tails; //Se elimina la propiedad tails!

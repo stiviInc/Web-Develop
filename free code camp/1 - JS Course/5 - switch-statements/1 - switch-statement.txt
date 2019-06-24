@@ -1,0 +1,44 @@
+*Cuando se utiliza?
+
+    Se utiliza cuando se tienen muchas opciones para evaluar!
+    Se encarga de testear un valor comparandolo con los case statements que estan definidos con varios posibles valores.
+
+    Los statements (declaraciones) son ejecutadas hasta que se encuentra un break;
+
+---------------------------------------------------------------------------------------------
+*Sintaxis:
+
+    switch(num) {
+        case value1:
+            statement1;
+            break;
+        case value2:
+            statement2;
+            break;
+        ...
+        case valueN:
+            statementN;
+            break;
+    }
+
+---------------------------------------------------------------------------------------------
+*case values
+    Los case values son testeados utilizando la lógica del strict equality ( === )
+
+*break
+    El break le indica a JS que pare de ejecutar declaraciones
+
+---------------------------------------------------------------------------------------------
+*Multiple Identical Options in switch statements
+
+    En JS es posible hacer que varios case realicen las mismas declaraciones sin necesidad de repetirlas...
+
+    case 1:
+    case 2:
+    case 3:
+        statements;
+        statements;
+        break;
+
+    El ejemplo anterior indica que cuando sea 1, 2 o 3 entrara a dicho case y realizará los statements que esten definidos...
+    

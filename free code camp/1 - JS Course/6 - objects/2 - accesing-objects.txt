@@ -1,0 +1,17 @@
+Existen 2 maneras de acceder a las propiedades de un objeto...
+
+
+1.- A traves de la notación de "."      --> Se utiliza cuando el nombre de la propiedad no contiene espacios en blanco!
+
+    Ejemplo:
+    
+        nombreObjeto.propiedad;
+
+2.- A traves de la notación de "[]"     ---> Es mas utilizada cuando el nombre de la propiedad contiene espacios en blanco, en casos así, el nombre se pone entre " "
+
+    Ejemplo:
+
+        nombreObjeto["nombre propiedad"];   //Acceder a una propiedad que su nombre contiene espacios en blanco
+
+        nombreObjeto["propiedad"];          //Acceder a una propiedad que su nombre No contiene espacios en blanco
+
