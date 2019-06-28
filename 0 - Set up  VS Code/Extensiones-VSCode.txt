@@ -6,8 +6,8 @@ https://www.youtube.com/watch?v=tZTpKF2pkQo&t=2200s
 
 
 1.- Live Server     ->  go live in port 5500
-2.- htmltagwrap     ->  alt + w
-3.- autorename tag  ->  
+2.- htmltagwrap     ->  alt + w     -> Select a group of text and wrap it in a p tag
+3.- auto rename tag  ->  
 4.- bracket pair colorizer -> helps displaying in different colors the next characters that are commonly used " () [] {} "
 
 5.- prettier        -> code formatter -> ctrl  shift + p ===> shift + alt + f
