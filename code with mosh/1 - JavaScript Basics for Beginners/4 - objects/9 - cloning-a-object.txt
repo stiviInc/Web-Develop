@@ -1,0 +1,19 @@
+The easiest way of copy an object and applying ES6 standars is by using the "spread operator"
+
+
+    Remember, the spread opearator take all the properties of an object and put all togheter in the place where you indicate...
+    Like example:
+
+    const circle = {
+        radius : 1,
+        color : "yellow"
+    }
+
+    anotherCircle = {...circle};    //Spread Operator for clone the object circle
+
+
+    Remember: The spread operator have the following sintax: ...nameObjectToSpread
+
+    ...nameObjectToSpread
+
+    

@@ -1,0 +1,25 @@
+
+
+For combined 2 arrays exist the method callad concat()
+
+
+    * Sintaxis:
+        const arrCombined = arr1.combined(arr2);
+    
+    * Description:
+        The combined method returns a array where the values of the second array are added at the end of all the values of the first array... the original arrays are not modified...
+
+For slice an array exist the method slice()
+
+    * Sintaxis:
+        const sliceArr = arr.slice(indexOfElementWhereTheSliceStarts, numbersOfElementsToSlice);
+
+    * Description:
+        This method returns an array without modified the original array, the new array contains the element that was located at the given index in the slice method
+
+
+                            ///---------------///
+                            *** Important Note***
+
+                    This means that if a reference value is modified, all the objects that points same reference will be uptaded....
+                    The primitive values of the arrays are combined/slice as values, but the references values are combined/slice by their reference...

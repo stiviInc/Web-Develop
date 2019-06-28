@@ -1,2 +1,14 @@
 A object is a collection of key - value pairs....
 
+A object can contains values different value types, another object [nested objects] and also functions!!!....
+    *The "functions" that are declared inside an object are called "methods"
+
+
+
+Example of an object with different value types, 1 nested object and 1 function....
+
+//This is an example of how a simple object is created!....
+//But for a better implementation, its more recommended use factory function or constructor function
+
+        *** For checked this example, go to file "1 - objectExample.js" ***
+

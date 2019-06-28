@@ -1,0 +1,11 @@
+The easiest way of check if a property already exist in a object is using the "in" keyword...
+
+
+This keyword check if what you ask exist in the object you indicate it...
+
+Example:
+
+    Go check the file "8 - enumerating-properties-of-an-object.js"
+
+
+For get all keys of an object, we can use the for..in loop

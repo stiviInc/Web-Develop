@@ -1,0 +1,20 @@
+*** JS Objects are dynamics, this means that its properties can be modified, since add new properties to delete its properties....
+
+If you declare an object as a const, it doesnt mean you cannot update its properties, an object as a cons only dont let to reassign the entire object....
+
+        * Add a new propertie to an object
+    // For add a new propertie its just like setting a new value to an actual propertie...
+       ...if the object doesnt find that propertie it'll create a new one!
+    cons goly ={
+        life : "",
+        shield: ""
+    }
+    goly.damage = "";   //of this way you are adding the dmg propertie that wasnt declared on the object!
+
+
+        *Delete a property from an object
+    //For delete a property from an object exist the keyowrd "delete"
+
+    delete nameObject.namePropertyToDelete;
+
+    

@@ -1,0 +1,18 @@
+
+        Value Types:   ---> Primitive Types
+* Number
+* String
+* Boolean
+* Symbol
+* undefined
+* null
+
+
+        Reference Types:
+* Object
+* Function
+* Array
+
+
+    primitives are copied by their values
+    objects are copied by their references

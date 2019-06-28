@@ -1,0 +1,14 @@
+There are 3 methods for remove elements of an array, the first 2 of them remove and returns the value, and the third allow us to remove more than one element...
+
+
+//Remove from the End
+const elementRemoved = arr.pop();
+
+//Remove from the beginning
+const elementRemoved = arr.shift();
+
+//Remove from the middle
+arr.splice(indexToStartRemoving,numberOfElementsToRemove);
+
+Ej: 
+arr.splice(2,4);    //Eliminar 4 elementos a partir del elemento 2.....

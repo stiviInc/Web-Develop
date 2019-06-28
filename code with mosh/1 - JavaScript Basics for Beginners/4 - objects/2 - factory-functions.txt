@@ -1,0 +1,20 @@
+Using factory functions allows us to create as many objects as we need it...
+This factory functions return an object with all its implementations, since its values to its methods...
+
+
+    ***   In modern JS if the key name and value name are equals, we can only declare it once....
+           also, for declare methods we can do it shorter, just writting the nameMethod and adding  () after... example: checkPrice()    ****
+
+    Due to factory functions are only use to create objects, its not necessary to create the object itself, you can return the object structure directly in the return value!....
+
+    Exaaaaaaaaaaaaaaaaaaample applying factory functions to create cars....
+
+    check the file called "2 - factory-functions.js"
+
+
+Important Note:
+    *** Its important to mention that factory functions are only a patter for create objects ***
+
+    * Declaring factory functions we have to use by convention the camel Notation:
+
+    oneTwoThreeFour....

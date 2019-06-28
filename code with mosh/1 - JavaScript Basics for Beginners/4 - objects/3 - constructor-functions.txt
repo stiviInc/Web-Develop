@@ -1,0 +1,18 @@
+The constructor function is another pattern to create objects....
+
+This is an approach similar to how objects are declared in Java....
+
+
+Working with constructor function we have to use the Pascal Notation:
+
+OneTwoThreeFour....
+
+The logic of this pattern its based on how the function its invoked...
+At the moment of use the "new" keyword, happened 3 things, 
+    1.- A new empty object is created
+    2.- Set "this" keyword point to this new obejct created!
+    3.- It'll return the object from the constructor function
+
+
+        //Example:
+    Go check the file "3 - constructor-function.js" to see the hole example!

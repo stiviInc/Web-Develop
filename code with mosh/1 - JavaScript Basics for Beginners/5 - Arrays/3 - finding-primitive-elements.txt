@@ -1,0 +1,10 @@
+In JS there are a few methods to look for primitive elements in an array....
+
+    Some of them returns the index where the element is:
+        -indexOf(elementToSearch); //--> The search starts at index 0
+        -indexOf(elementToSearch,indexWhereSearchBegin);    //The search starts at the indicated index
+        -lastIndexOf(elementToSearch);  // --> returns the index of the last index where the element was found!
+
+    But besides this methos that returns the index's elements, also exist a method that returns true or false if an element exist in an array
+
+        -includes(elementToSearch)  // --> if the element exist in the array returns true, otherwise returns false!

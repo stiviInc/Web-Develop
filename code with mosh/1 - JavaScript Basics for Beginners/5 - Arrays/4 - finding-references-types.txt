@@ -1,0 +1,40 @@
+for make a search of references types in an array, we cant use the same methods as we used for find primitive types.... instead we use the following methods:
+
+
+- find Method:
+
+    * Sintaxis: 
+    
+    nameArr.find(function(element){
+        return element.propertyOfTheValueWeAreLookingFor = valueWhatWeAreLookingFor;
+    })
+
+    * Description: 
+    This method use a callback function that returns an undefined when the element indicated was not found, and if the element was found returns the hole object (reference type)...
+
+    If the element was found, returns the hole object, it means, the function returns an object!...
+
+
+    * Example:
+
+    Check the file called 4 - finding-reference-types.js
+
+
+-findIndex Method 
+
+    It works exactly as the find Method, the only difference is the sintax and the value this function returns...
+
+    This function returns the index where the element is located, ej : If the element we are looking for is locate in the object that is placed at index 3, the return value will be 3...
+    buuuuuuuuuuuuuuut, if the element was not found, it will return a -1 ....
+
+    * Sintaxis:
+
+        nameArr.findIndex(function(element){
+            return element.propertyOfTheValueWeAreLookingFor = valueWhatWeAreLookingFor;
+        });
+
+
+    * Example:
+
+        check same file that is mention in find method...
+

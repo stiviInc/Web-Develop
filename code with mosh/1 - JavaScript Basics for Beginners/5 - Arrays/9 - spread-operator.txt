@@ -1,0 +1,24 @@
+Here we go again with the powerful spread operator...
+
+The spread operator allows us to combined and make a copy of an array...
+
+
+    //Combining arrays with the spread operator
+
+    const arr1 = [1,2,3];
+    const arr2 = [4,5,6];
+
+    const combinedArrays = [...arr1, ...arr2, 'a',2];
+
+    As you can see in the example above, besides combined the 2 arrays, when we use the spread operator, we are not limited to only can combine 2 arrays, we also can add more elements to the new combinedArray ....
+
+    //Making a copy of an array using the spread operator
+
+    cont arr = [1,2,3,4];
+
+    const copy = [...arr];
+
+    In the example above, the spread operator spreads all the values of the array arr....
+
+
+    

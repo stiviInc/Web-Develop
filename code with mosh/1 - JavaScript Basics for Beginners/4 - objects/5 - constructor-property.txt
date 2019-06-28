@@ -1,0 +1,4 @@
+Every object has a constrcutor property that refeers to the constrcutor was used to create that object....
+
+
+nameObj.constrcutor;

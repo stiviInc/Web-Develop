@@ -1,0 +1,17 @@
+There are different ways of emptying an array:
+
+
+
+//First Solution
+If the array only have 1 reference, this is the best practice and also if the array is declared a let not as constant:
+
+    arr = [];
+
+//Second Solution
+If the array have multiple references and you want to affect all of them, this is the best approach:
+
+    arr.length = 0;
+
+    * Note:
+
+Also you can use the splice method, but its a little bit tricky, thats why the second solution is the best practice...

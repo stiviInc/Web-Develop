@@ -1,0 +1,13 @@
+const numbers = [3,4];
+
+//Add elements at the end
+numbers.push(5,6);
+
+//Add elements at the begining
+numbers.unshift(1,2);
+
+//Add elements in the middle
+numbers.split(indexWhereElementsWillBeAdd,numberOfElementsToRemove,listOfElementsToAddSeparateItByComa);
+
+//Add 'a','b' next to index 2...
+numbers.split(2,0,'a','b');
