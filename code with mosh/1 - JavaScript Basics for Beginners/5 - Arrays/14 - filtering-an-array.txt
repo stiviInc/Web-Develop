@@ -1,0 +1,17 @@
+
+The filter() method returns a new array with all values that matched the filtering condition...
+
+
+Example:
+
+//Filter the following array of numbers, and return only the positives....
+
+const numbers = [0,2,3,1-2,3-1,-4];
+
+let onlyPositives = numbers.filter(number => number >= 0);
+
+
+Description:
+
+This method receibe as a parameter a callback function (It can be used an arrow function!)....
+And the values that mached with the filterin condition are adding to a new array, that new array will be returned when the filter method ends of analize every positions in the original array!....

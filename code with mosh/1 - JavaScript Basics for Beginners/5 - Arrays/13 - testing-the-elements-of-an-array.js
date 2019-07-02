@@ -1,0 +1,19 @@
+/*
+    In modern JS we have available 2 methods for test the elements of arrays...
+
+    The firstable of them is:
+    every() ---> This method takes as a parameter a callback function with one argument... this argument is the value that will be evaluated...
+    This method returns a true or false depending if all values match with the condition of returning value!... if only 1 value doesnt match, it'll stop to search more values and will return a false!...
+
+
+    The second methos is:
+    some()  ---> This method have the same logic as every() talking about parameters... but this method function is to evalaute and return true if at least one of the values match with tne condition or false if any value match it...
+    At the moment that this method find a match, will return a true and stop to search for more coincidences...
+
+*/
+
+//Example...
+
+//For see an example of the every() method , check the file named : "13-testing-all-lower-case-letters.js"
+
+//For see an example of the some() method, check the file named: "13-testing-some-upper-case-letters.js"
