@@ -7,8 +7,11 @@ const elementRemoved = arr.pop();
 //Remove from the beginning
 const elementRemoved = arr.shift();
 
-//Remove from the middle
-arr.splice(indexToStartRemoving,numberOfElementsToRemove);
+        //Remove from the middle
+        arr.splice(indexToStartRemoving,numberOfElementsToRemove);
 
-Ej: 
-arr.splice(2,4);    //Eliminar 4 elementos a partir del elemento 2.....
+        Ej: 
+        arr.splice(2,4);    //Eliminar 4 elementos a partir del elemento 2.....
+
+            *Description of .splice() method....   
+                This method returns an array with the element that were removed!

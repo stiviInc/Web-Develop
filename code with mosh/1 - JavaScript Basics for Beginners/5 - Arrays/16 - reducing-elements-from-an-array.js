@@ -21,4 +21,6 @@
                 }, 5);
     ///---///---///---///---///---///---///---///---///---///---///---///---///---///
 
+
+    if you dont define a second parameter, the accumulator value will be the vale of the firs position in the array!
 */
