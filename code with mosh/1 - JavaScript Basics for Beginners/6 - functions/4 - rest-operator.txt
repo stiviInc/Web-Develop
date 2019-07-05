@@ -1,0 +1,15 @@
+The rest operator takes all the arguments that a function receibes and pack it into an array....
+
+It have the same sintax as the spread operator.... but it is apply only in the parameters of the functions
+
+In order that the rest operator produces an array, we can work with the aray methods()....
+
+function sum(...args){
+    args.reduce((sum,valActual) => sum + valActual);
+}
+
+After the rest operator we cant have any other parameter defined!.... ---> This means that the rest operator have to be the last parameter that a function can receibe, before of it, the function can recebie more parameters but not after... example:
+
+function hello(par1,par2,...args){
+    
+}

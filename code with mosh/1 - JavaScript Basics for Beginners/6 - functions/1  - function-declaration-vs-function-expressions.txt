@@ -1,0 +1,39 @@
+In JS there are 2 ways of declare functions:
+
+    1.- Function Declaration
+
+        function nameFunction(){
+            //Code...
+        }
+    
+    2.- Function Expression  
+
+        There are 2 kinds of these function:
+            * Annonymous Function Expression
+            * Named Function Expression
+
+        Annonymous Function Expression:
+            let var = function(){
+                //Code
+            };
+
+        Named Function Expression:
+            let var = function nameFunction(){
+                //Code
+            };
+
+    Differences:
+    
+    The function declaration is used to define a normal function, the function expression is used to assign a function to a variable or a constant!
+
+    If a function expression doesnt have a name, its called Annonymous Function Expression, but if its have a name, its called Named Function Expression
+
+    The way of invoke a Function Expression is by the name of it constant or variable...
+
+    Example:
+
+        let run = function(){
+            console.log("Run bitch");
+        }
+
+        run();  //Call the Annonymous Function Expression

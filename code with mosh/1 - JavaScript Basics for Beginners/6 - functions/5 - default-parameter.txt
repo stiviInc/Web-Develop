@@ -1,0 +1,15 @@
+JS functions admit to set a default value to its paramters... this means that if the function is called but there is no values for the parameters expected, those paramters that have a default value will take that value and the function will work with it....
+
+There is a rule:
+    All the parameters after one parameter with a default value have to have a default value too.... otherwise it'll cause conflicts....
+
+
+    Example:
+
+    function example(par1,par2 = 3, par3 = .5){
+        //Code
+    }
+
+
+    * How to define a default value to a parameter?
+        When you define the parameter you only need to add an "=" and assign the default value... easy as it!

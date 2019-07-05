@@ -1,0 +1,17 @@
+What is hoisting?
+
+    Hoisting is the procces of moving functions declaration to the top of the file and its doing automaticlly by the JS engine...
+
+Thats why we can call a function declaration from wherever of the file, it doesnt matter if we first make the call and after we define the function....
+
+But this it cant be applied to function expressions, if we try to call a function expression before its declaration, we are gonna get an error, and this is because function declaration works as if it would be a constant or a variable.... so if we want to call a function expression, we have to declare it first and then make the call
+
+
+    Wrong Error:
+
+        run();
+        let run = function(){};
+    
+    Rigth Example:
+        let run = function(){};
+        run();

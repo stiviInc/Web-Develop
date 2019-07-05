@@ -1,0 +1,16 @@
+In JS functions you can send as many arguments as you want, it doesnt matter if the function has declared  same amount of arguments to receibe
+
+    Like Example:
+
+    function sum(a,b){
+        return a+b;
+    }
+
+    In the above function there has been declared only 2 parameteres, but we can send less or more if we want....
+
+    sum(1,2,3,3);   //This sentence wouldn´t give an error, but the function only will return the sum of the 2 first parameters....
+
+    If we would like to make the sum of all the arguments that were sended, JS offer us a keyword called "arguments"....
+    With this keyword we can acces to an object where are saved all the arguments that were receibed by the function...
+    This object has an iterator, so we can use a for..of to iterate over the value's object
+

@@ -1,0 +1,6 @@
+When you create a variable using the "var" keyword, JS creates a global scope variable and also attach the variable to the window browser object!
+
+The window browser object shouldnt be touch by variables or functions, becase some front end libraries work with it and if you attach things there, it could create a conflict!
+
+
+Also when you create a function withou encapsulate it, the function is attach to the window object!....
