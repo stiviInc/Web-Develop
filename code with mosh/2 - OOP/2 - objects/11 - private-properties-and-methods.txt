@@ -1,0 +1,18 @@
+The path to apply abstraction to our functions that shouldnt be accesible from the outside its by the "clousures"....
+
+And for the variables its declaring it as local variables of the object, this means, using let or const instead of this....
+
+    When you declare a variable or a function with this, you are creating a property and a method (respectively)... this means that it'll be accesible from the outside!
+
+In contrast, when you declare variables and functions without the this... you are creating local variables and local functions that it wont be accesible from the outside, only from the inner of the object... and as well, the way of access (from the inner obviously), it will be as if you were calling a variable or function normally, this means, without the "this".... 
+
+    See the example at file named: 11 - applying-abstraction.js
+
+/-//---///---////----/////-----/////-----////----///---//--/
+In simple words:
+
+Working with the constructor function of objects!:
+
+    When you define either a variable or a function without the keyword "this", you are creating a local variable or a function variable that will be accesible only from the inner of the object and it wont be even show to the outside, the only way of access at this variable will be calling them without the "this" keyword, just calling them with their name, and if its a function, calling it as a function (nameOfFunction(parameters...)).....
+
+    And if you define a variable or a function with the "this" keyword, well, you are creating a property or a method(respectively), and both are accesible from the outside.... You can call a local variable and local function inside of a method due to the "clousures" logic!....

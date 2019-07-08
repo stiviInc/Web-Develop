@@ -1,0 +1,7 @@
+OOP has 4 basic concepts:
+    1.- Encapsulation   -> Put together in a same block code everything that is related... group related variables and function together! Reduce complexity and increase reusability
+    2.- Abstraction     -> Simpler Interface, Reduce the impact of change..., hide the details and complexity and show only the escentials
+    3.- Inheritance     -> Eliminate redundant code...
+    4.- Polymorphism    -> same functions works for different objects!... refactor ugly switch/case statements!
+
+

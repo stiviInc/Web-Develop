@@ -1,0 +1,19 @@
+A clousure ("clausura") its the combination of a function and the lexico field where that function was declared!
+
+This means clousures are function that handle independent variables, in other words:
+The function defined in the closure "remember" the scope where it was created
+
+
+        Example:
+
+function inicia() {
+  var nombre = "Mozilla"; // 'nombre' es una variable local creada por la función 'inicia'
+  function muestraNombre() { // 'muestraNombre' es una función interna (un closure)
+    alert(nombre); // dentro de esta función usamos una variable declarada en la función padre
+  }
+  muestraNombre();
+}
+inicia();  
+
+    - Description:
+La función inicia()  crea una variable local llamada nombre, a continuación, define una función denominada muestraNombre(). muestraNombre() es una función interna (un closure) definida dentro de inicia(), y sólo está disponible en el cuerpo de esa función. muestraNombre() no tiene ninguna variable propia, lo que hace es reutilizar la variable nombre declarada en la función externa.
