@@ -1,0 +1,6 @@
+Every object has a prototype...
+A prototype is just a regular object in memory!
+
+
+When we try to acces a property or a method, JS engine look for it firstable in the object, but if it cant find it, it'll search in the prototype for that object!
+

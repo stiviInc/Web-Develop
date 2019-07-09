@@ -1,0 +1,4 @@
+This property enable to objects take properties and methods from another objects
+
+    Makes easy to reuse code in an application
+

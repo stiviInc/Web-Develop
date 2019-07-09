@@ -1,0 +1,15 @@
+A Instance Member reffers to the properties/methods that an object inherit directly from its constructor function....
+
+A Prototype Member reffers to the methods/properties that an object can acces throw its Prototype... (It's parent!)
+
+
+The main reason for convert a instance member into a prototype members is to increase the performance and decrease the memory resources!
+
+How to know when a method should be define as a prototype member?
+    Answer: Think the next scenario: You have a constructor function where you have multiple methods, and in your app your gonna have a lot of objects from this constructor.... so, each object will have define the same methods a huge ammount of times!, in this cases, its better to move that method to its prototype and create a prototype member, of this way, each object won't keep having same method a lot of times , on the contrary, the method will be define just one time in the prototype of all those objects!
+
+How to convert a Instance Member into a Prototype Member?
+    Well, its super easy, you have to acces at the object's prototype and add that method to the prototype.....Just copy-paste the implementation of the method....
+
+
+For see a live example of converting instance members into prototype members, check the file named: 6 - prototype-vs-intance-members.js

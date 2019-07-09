@@ -1,0 +1,38 @@
+Too see full documentation about this topic, visit the next link:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
+
+----------------------------------------------------------------------------------------------
+In order to create a descriptor we have to use the defineProperty() method....
+Remember, this method defines a new property directly on a object or modifes an existing property on an objec, and returns the object modified....
+
+
+    Sintaxis:
+Object.defineProperty(obj, prop, descriptor);
+
+ParametersSection
+    obj:        ---> The object on which to define the property.
+    prop:       ---> The name or Symbol of the property to be defined or modified.
+    descriptor: ---> The descriptor for the property being defined or modified.
+
+
+    Description
+Normal property addition through assignment creates properties which show up during property enumeration (for...in loop or Object.keys method), whose values may be changed, and which may be deleted. This method allows these extra details to be changed from their defaults. By default, values added using Object.defineProperty() are immutable.
+
+Property descriptors present in objects come in two main flavors: data descriptors and accessor descriptors. A data descriptor is a property that has a value, which may or may not be writable. An accessor descriptor is a property described by a getter-setter pair of functions. A descriptor must be one of these two flavors; it cannot be both.
+
+Both data and accessor descriptors are objects. They share the following optional keys(The default value is in the case of defining properties using Object.defineProperty()):
+
+    * configurable
+        true if and only if the type of this property descriptor may be changed and if the property may be deleted from the corresponding object.
+            - Defaults to false.
+
+    * enumerable
+        true if and only if this property shows up during enumeration of the properties on the corresponding object.
+            - Defaults to false.
+
+    * writable
+
+An accessor descriptor also has the following optional keys:
+
+    * get
+    * set
