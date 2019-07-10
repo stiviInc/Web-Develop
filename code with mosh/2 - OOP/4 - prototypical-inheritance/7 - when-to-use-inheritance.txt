@@ -1,0 +1,9 @@
+Apply inheritance to your project shoul be something you really think twice, some times its dont really needly to do it...
+But if you are gonna do it, keep it simple, Avoid creating inheritance hierarchies, this means, only apply inheritance at one level: parent - child... just that!
+
+
+There is a thecnique named Composition that can replace inheritance....
+Favor Composition over inheritance....
+With this thecnique you can create new Objects as you need without any problem
+
+    For achieve Composition in JS we can use Mixins!
