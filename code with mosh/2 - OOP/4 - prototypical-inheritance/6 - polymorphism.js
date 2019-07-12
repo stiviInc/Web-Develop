@@ -48,6 +48,6 @@ let bereta = new Pistol();
 let pump = new Shotgun();
 let ak47 = new Gun();
 
-//Showing polyformism in action!s
+//Showing polyformism in action!
 let guns = [bereta,pump,ak47]
 for(let gun of guns) console.log(gun.shoot());

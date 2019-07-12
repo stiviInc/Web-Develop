@@ -4,6 +4,7 @@ function Circle() {}
 
 // Prototypical inheritance 
 Circle.prototype = Object.create(Shape.prototype);
+//Resetting the constructor!
 Circle.prototype.constructor = Circle; 
 
 function Rectangle(color) {

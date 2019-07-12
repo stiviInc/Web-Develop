@@ -11,7 +11,8 @@
     Can we simplify the way of work with composition?
         Of course, its very easy, you can create a function called "mixin" or "compose" or some name related.... and set 2 parameters to it....
             * Parameters:
-                1.- target  ---> The object that will take properties and methods from the other objects!
+                1.- target  ---> The prototype's object that will take properties and methods from the other objects!
+                                  Example:  If you want to apply composition at Shark Object, the target parameter have to be Shark.prototype!
                 2.- the rest of objects! ---> Due to we dont know how many parameters could take this function in the future, we have to define a "rest operator" for receibe all the parameters that could be send it!
 
             * Function's Code:

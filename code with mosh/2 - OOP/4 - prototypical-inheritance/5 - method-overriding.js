@@ -6,7 +6,7 @@
             ChildName.prototype.nameMethod = function(){
                 //Write the code that will override the parents method!
             }
-        Imporant: The step 1 its super important, the overiding have to be made after and only after the inheritance!
+        Imporant: The step 1 its super important, the overriding have to be made after and only after the inheritance!
 
         If you want to call the parents method inside the override method, you can do it with the next statement:
             ParentName.prototype.nameMethod.call(this); //this is reffering to the Child
