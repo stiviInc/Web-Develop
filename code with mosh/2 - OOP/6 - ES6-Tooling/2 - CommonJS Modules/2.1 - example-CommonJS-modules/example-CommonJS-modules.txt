@@ -1,0 +1,6 @@
+//Example of Exporting and Importing a Module!
+
+//Create a Parent Gun Class and a Child Pistol Class... Apply abstraction, override and polymorphism
+//Export both Classes
+//Create another file where both classes will be imported and create one object of each one!
+

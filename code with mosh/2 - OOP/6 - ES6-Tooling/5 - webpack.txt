@@ -1,0 +1,10 @@
+
+Sumarizing what webpack does: Webpack allow us to bundle all our JS code into one single file.....
+
+Webpack is responsible of install Babel dependencies and all tools requires for make the bundles!
+
+Babel is responsible for translate modern JS into older JS (ES5) that most browsers understand!
+
+
+            How to getting started?
+    https://webpack.js.org/guides/getting-started/

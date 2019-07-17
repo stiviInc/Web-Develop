@@ -1,0 +1,19 @@
+The main benefits of apply modularity are the following:
+
+    Maintainability
+    Reuse
+    Abstraction
+
+A module is a file with a specific part of code that do something and can be exported to be reused in other files!
+
+
+    There are 2 types of modules:
+
+    1.- CommonJS    ---> Works in Node.JS 
+    2.- ES6 Modules ---> Works in the Browser
+
+
+    An imporant aspect of modularity is: Things that are highly related should go together
+
+    Everything inside a module is private... unlees we explicited export it!
+    
