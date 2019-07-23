@@ -1,0 +1,7 @@
+Components can be defined as a JS Function....
+
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;  //JSX are converted into React Elements!
+}
+
+In essence, a React Component accepts a single argument named "props" and returns a React Element

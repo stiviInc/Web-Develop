@@ -1,0 +1,9 @@
+For read the whole document, visit the next link:
+
+    https://en.reactjs.org/docs/components-and-props.html
+
+
+For read a document specifically of Components, check the next page:
+
+    https://en.reactjs.org/docs/react-component.html
+

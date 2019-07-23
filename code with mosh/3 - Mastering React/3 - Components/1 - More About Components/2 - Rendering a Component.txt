@@ -1,0 +1,28 @@
+            Rendering a Component
+
+As well as some React Elements represent DOM tags like div,h1,span....
+
+    const element = <div />;
+
+Also the user-defined components are React Elements....
+
+    const element = <Welcome name="Sara" />;    //Welcome is the component ... name="Sara" will be send as an object to the Welcome component.... 
+                                                //The component Welcome will receibe the object specifically with the name of "props".....
+
+*** When React sees that are properties after a component, those arguments are send as a single object call "props"
+
+
+
+Check the next example and read its explanation:
+
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+const element = <Welcome name="Sara" />;
+ReactDOM.render(element,document.getElementById('root'));
+
+1.- We call ReactDOM.render() with the <Welcome name="Sara" /> element.
+2.- React calls the Welcome component with {name: 'Sara'} as the props.
+3.- Our Welcome component returns a <h1>Hello, Sara</h1> element as the result.
+4.- React DOM efficiently updates the DOM to match <h1>Hello, Sara</h1>.

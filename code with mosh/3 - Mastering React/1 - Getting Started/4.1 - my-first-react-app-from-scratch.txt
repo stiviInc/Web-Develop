@@ -1,0 +1,31 @@
+When you create a project with the command:     npx create-react-app name-app 
+
+The result is a folder with all files needed, you can start the development server typing the command:  npm start
+
+Once the app is open in the browser, each change that you make will be reflect automaticly when you save them!
+
+In order to create our first react app from scratch, we need to delete every files of src folder.... and create a new index.js
+
+Steps to create our first react app from scratch:
+    1.- Inside the new index.js we need to make the needly imports....
+
+        import React from 'react';          //Importing the object React from the module 'react'
+        import ReactDom from "react-dom";   //Importing the object ReactDom from the module 'react-dom'
+    
+    2.- Declare a constant assigning a JSX value that will be display in its corresponding DOM element!
+
+        const element = <h1>Hello World</h1>;
+    
+    3.- Render the new element in the RealDom....
+
+        ReactDom.render(element,document.getElementById("idWhereTheElementWillBeDiplayed"));
+
+And thats all that we need to do in our index.js file!
+
+
+    About the RealDom....
+    In the index.html we have to create a container where our react element will be displayed!.... its easy as follows:
+
+    <div id="containerToDiplayReactElements"></div>
+
+And thats all, in the index.js when the element will be render, it has to use the id defined for this container!

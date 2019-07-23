@@ -1,0 +1,19 @@
+            Composing Components
+
+Components can refer to other components in their output.
+This means that we can create a component by calling other components in the render() method of the Compose Component! 
+
+    -For example, we can create an App component that renders Welcome many times:
+
+
+function App() {
+  return (
+    <div>
+      <Welcome name="Sara" />
+      <Welcome name="Cahal" />
+      <Welcome name="Edite" />
+    </div>
+  );
+}
+
+In this example, App is the Compose Component, and in its render() method, it is calling several times the Welcome Component!

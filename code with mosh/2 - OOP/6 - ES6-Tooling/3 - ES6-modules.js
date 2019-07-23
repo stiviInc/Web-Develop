@@ -19,10 +19,8 @@
 
 //Export sintax:
 
-export class Animal{
-
-}
+export class Animal {}
 
 //Import sintax
 
-import{Animal} from './animalFile.js';  //The name of the file in this statements is just for show how the sintax is....
+import { Animal } from "./animalFile.js"; //The name of the file in this statements is just for show how the sintax is....

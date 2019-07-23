@@ -1,0 +1,3 @@
+for import React and {Component} type:  imrc
+
+for create a class type:                cc

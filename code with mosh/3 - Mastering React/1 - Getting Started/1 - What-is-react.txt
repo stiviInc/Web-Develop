@@ -1,0 +1,23 @@
+React is a librarie.
+
+React is base on components: A component is a piece of the UI... are reusable ...
+
+Every react aplication contains at least the Route component
+
+A react aplication is a tree of components
+
+Talking about implementation, a components is a JS Class that has a state = {}, and a render(){} method
+
+    - The render method is the responsible for describe how the UI should look like
+
+    -The output of the render() method is a ReactElement wich is a simple plane JS Object that maps to the DOM Element... this represents the Virtual DOM in memory...
+
+    Of this way, when we changed the stated of a component, we get a new react Element, react will compare this element and its childrens with the previous one and figures out what is changed and then it will update a part of the Real DOM to keep it in sync with Virtual DOM... this means working with React we don't have to work with the Real DOM... (No code to manipulate the DOM or code to attach event handlers!)... we only have to update the state of our components and react will update the Real DOM...
+
+
+React ---> reacts to state changed and update the Real DOM
+
+
+
+
+
