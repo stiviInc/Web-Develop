@@ -1,3 +1,5 @@
-for import React and {Component} type:  imrc
+for import React and {Component} type:              imrc
 
-for create a class type:                cc
+for create a class type:                            cc
+
+for create a stateless functional component type:   sfc
