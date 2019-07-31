@@ -1,0 +1,11 @@
+lodash has an incredible method for get nested properties, and it is very easy to use....
+
+
+The method is call get() and takes 2 parameters:
+    1.- the object where the property will be taken
+    2.- the name of the property you want to take, it doesnt matter if is nested or not!
+
+Sintax:
+    _.get(objectToTakeProp,nameProp)
+
+    

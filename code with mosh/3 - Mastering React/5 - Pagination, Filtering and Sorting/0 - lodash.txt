@@ -1,0 +1,32 @@
+    Check the full documentation:
+
+    https://lodash.com/docs/4.17.15
+
+    ***************************************************************************
+    How to set up lodash in my project?
+
+    1.- Since the terminal type the next command:                                                           --->    npm i lodash@4.17.10
+    2.- Once the installation is done, in each file where you will need lodash, import it of the next way:  --->    import _ from "lodash";
+    3.- lodash is now ready for start to work with....
+
+    A popular method to create an array given the initial and last value is:    _.range(initial,lastValue)    
+    Creates an array of numbers (positive and/or negative) progressing from start up to, but not including
+
+    ***************************************************************************    
+    ***************************************************************************
+
+        What is lodash?
+
+        Lodash is a popular JS library that makes easier the work with arrays,objects....
+
+        Why Lodash?
+
+        Lodash makes JavaScript easier by taking the hassle out of working with arrays, numbers, objects, strings, etc.
+        Lodash’s modular methods are great for:
+
+        Iterating arrays, objects, & strings
+        Manipulating & testing values
+        Creating composite functions
+    ***************************************************************************
+
+        

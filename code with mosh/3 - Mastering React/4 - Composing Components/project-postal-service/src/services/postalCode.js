@@ -95,3 +95,7 @@ const postalService = [
 export function getListPostalCodes() {
   return postalService;
 }
+
+export function getZones() {
+  return [{ _id: 1, name: "Urbano" }, { _id: 2, name: "Rural" }];
+}

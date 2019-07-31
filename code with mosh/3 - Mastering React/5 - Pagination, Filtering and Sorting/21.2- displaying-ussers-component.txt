@@ -1,0 +1,41 @@
+
+    Every JSX element is converted into a JS object....
+        const x = <h1>text</h1>     ---> This is perfectly valid... we can also apply this to usser's components....
+        const x = <MyComponent/>    ---> The ussers component will be stored in the x constant....
+    
+    Following the logic explained above, in case in our table body we need to render components created by us, we should send them together with the columns info that it'll be rendered....
+    - How can we do that?
+        * We can add an spetial prop with a different name where we will define our personal component with all its own props that requires to work!....
+
+    Example:
+
+         columns = [
+            { columnName: "title", label: "Title" },    //columns info
+            { key: "liked", content:  <MyComponent/> }, //ussers component
+         ]
+
+    But in case our component needs a reference to an object in order to execute its own methods, we need to define the content property as a function...
+
+         columns = [
+            { columnName: "title", label: "Title" },
+            { key: "liked", content: object => <MyComponent prop1={object} onClick={() => onMethod(object)}/> },
+         ]
+
+
+    As you can see, we are defining the JSX Component as it was defined before we extracted the table body....
+
+    --------------------------------------------------
+
+                Rendering <MyComponent/>
+    1.- In the tableBody component we need to create a method that receibes 2 parameters, the first one it has to be the current row and the second one the current column...
+    2.- Inside the method we need to verify if the current column has a prop call "content" if it has, it means that that column it is <MyComponent/> if not, its just another columnName that can be rendered using the ._get() method....
+    3.- If the column has the "content" prop, we have to call the prop content, but if its was defined as a function, you have to call it as a function and send as many parameters as it requires ---> column.content(row) , if it doesnt has that prop, we need to return the result of the ._get() method
+
+    The method will be the following:
+
+        cellRendering = (row,column) =>{
+            if(column.content) return column.content(row)
+            return ._get(row,column.columnName);
+        }
+
+    //Remembeeeeeeer: The row is the current object that it's props are being displayed, in other words, its the object that <MyComponent/> needs to receibe in order to works propertly....

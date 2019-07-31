@@ -1,34 +1,15 @@
 import React, { Component } from "react";
 import PostalList from "./components/postalCodeList";
-import NavBar from "./components/navbar";
-import { getListPostalCodes } from "./services/postalCode";
+//import NavBar from "./components/common/navbar";
 
 class App extends Component {
-  state = {
-    listCodePostals: getListPostalCodes()
-  };
-
-  handleDelete = postalCode => {
-    this.setState({
-      listCodePostals: this.state.listCodePostals.filter(postCode => {
-        return postCode.codigo !== postalCode.codigo;
-      })
-    });
-  };
-
-  handleLike = postalCode => {
-    const listCodePostals = [...this.state.listCodePostals];
-    const index = listCodePostals.indexOf(postalCode);
-    listCodePostals[index].like = !listCodePostals[index].like;
-    this.setState({ listCodePostals });
-  };
-
   render() {
     return (
       <main className="container">
+        {/* 
         <NavBar
           value={
-            this.state.listCodePostals.filter(
+            listCodePostalsOriginal.filter(
               postalCode =>
                 postalCode.asentamiento.tipoAsentamiento === "Colonia"
             ).length
@@ -39,7 +20,7 @@ class App extends Component {
 
         <NavBar
           value={
-            this.state.listCodePostals.filter(
+            listCodePostalsOriginal.filter(
               postalCode =>
                 postalCode.asentamiento.tipoAsentamiento === "Fraccionamiento"
             ).length
@@ -50,7 +31,7 @@ class App extends Component {
 
         <NavBar
           value={
-            this.state.listCodePostals.filter(
+            listCodePostalsOriginal.filter(
               postalCode => postalCode.ciudad.zona === "Rural"
             ).length
           }
@@ -60,7 +41,7 @@ class App extends Component {
 
         <NavBar
           value={
-            this.state.listCodePostals.filter(
+            listCodePostalsOriginal.filter(
               postalCode => postalCode.ciudad.zona === "Urbano"
             ).length
           }
@@ -70,19 +51,15 @@ class App extends Component {
 
         <NavBar
           value={
-            this.state.listCodePostals.filter(
+            listCodePostalsOriginal.filter(
               postalCode => postalCode.like === true
             ).length
           }
         >
           <span>Total de Likes: </span>
         </NavBar>
-
-        <PostalList
-          onDelete={this.handleDelete}
-          listCodePostals={this.state.listCodePostals}
-          onLikeClick={this.handleLike}
-        />
+          */}
+        <PostalList />
       </main>
     );
   }

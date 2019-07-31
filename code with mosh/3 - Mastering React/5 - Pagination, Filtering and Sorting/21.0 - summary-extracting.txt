@@ -1,0 +1,35 @@
+Let's define some rules to follow for be able of work with the extracting components of table header and table body:
+
+-----------------------------------------------------
+    For Table Header:
+
+This component need to receibe 3 props:
+    1.- columns     ---> This is the "array", it'll contain the information and the ussers components that it'll be rendered in the table body..., both it'll be stored as an object, each object it'll contain the info for each row...
+
+                Structure of columns array:
+        * each object of the columns array it'll be the info or ussers component of each row....
+        * each object of the columns array its an column object...
+        * if a column object it'll be info for its row, it should be defined of the next way:
+            {columnName: "name", label:"labelToDisplayInHeader"}
+        *if a column objet it'll be a ussers component, it should be defined of the next way:
+            {key: "key", content: object => <MyComponent prop1={object} onClick={() => onMethod(object)}/>}
+
+    2.- onSorting   ---> It's the reference to the handleSorting()
+    3.- sortColumn  ---> Its an object with 2 properties: columnName and order.... this object its manipulate and send it to the handleSorting(), its job is to determine what column and how it'll be sort it!
+-----------------------------------------------------
+    For Table Body:
+
+This component receibes 2 props:
+    1.- rows        ---> The array of objects where all the info is stored, [In this array there arent ussers component]
+    2.- columns     ---> Same array as tableHeader component
+
+    Logic:
+The rows array contains row objects, each row has properties that it'll be accessed ussing column objects...
+The rows object map will create the <tr> and inside each <tr> we will use the columns array to create the bunch of <td>
+    in other words:
+    <tr> ---> Are the rows 
+    <td> ---> Are each column of each row....
+
+*** Rendering the <td> ***
+Due to each <td> are a column of a row, exist the posibility that at least one <td> be a ussers component, that is why we need to call the cellRendering() method for render correctly depending what column we are dealing with...
+    --- if you want to see how the cellRendering() method is created, check the file call "21.2-displaying-ussers-components.txt" ---
