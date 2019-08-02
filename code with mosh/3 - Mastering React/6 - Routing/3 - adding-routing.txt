@@ -1,0 +1,34 @@
+React is just a library responsible for rendering the view, that is why we need to install an extra library call: react-router-dom
+    - Installing react-router-dom:  npm i react-router-dom@4.3.1
+
+    *** Just as general kwnoledge, there is another library call: react-router-native for handle the routing in native applications ***
+
+After install the react-router-dom library, we need to do 2 more steps:
+
+    1.- In the index.js file we need to import the component {BrowserRouter}:
+            import {BrowserRouter} from 'react-router-dom';
+    
+        After importing, we need to wrap the component that is being rendered in the ReactDom.render(<Component/>, doc....) in a <BrowserRouter> component
+
+        It'll looks like this:
+            ReactDom.render(<BrowserRouter><Component/></BrowserRouter>,docu....);
+        
+    2.- Register our Route, this means that we will tell react what component should be rendered based on a given url...
+
+            For render a component based on a given url, we need to use the Route Component....
+            For be able of use the Rout component, we need to import it:
+
+                import {Route} from 'react-router-dom';
+            
+            After importing the Route component, we need to register the Route components, this basically means we need to define Route components and assign their corresponding attributes... it has 2 attributes that it'll be passed as props:
+                1.- path=""         ---> The url
+                2.- component={}    ---> The component that sould be rendered base on the url
+        
+        Example: If you want to render the Products component based on its url, it'll looks like this:
+
+            <Route path="/products" component={Products} />
+        
+        How it works?
+        - The Route component looks at the current URL and if it matches to the path pattern, it'll rendered the component indicated in its attribute component={Component}
+
+        * If you would need to display a different components in same page based on the URL, you only need to add more Route components and set to each one its corresponding attributes in order to render what it should be rendered...

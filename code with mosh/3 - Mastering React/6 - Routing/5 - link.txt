@@ -1,0 +1,19 @@
+The main purpose of react is to create Single Page Applications, this are that pages that only make 1 server request and its made the page is load by first time....
+
+
+If our React App needs more than 1 page, we can apply routing to them for indicate what component should be rendered depending the URL.... but if we are not working with Link components for make the navigation through our app, each time we make a route the page will make a server request and load everything, this is very expensive in terms of performance.... to solve this, react-route-dom give us the Link component, using them instead of the typical <a> HTML element, our app wont keep reloading every time a routing is made.....
+
+    How Link component works?
+Under the hood, a Link component is an <a > element, but it has a function that handled the clicks, this function makes the URL update with the value given in the to attribute...
+
+    Sintax of Link component:
+
+<Link to="valueToUpdateTheLink">
+
+    *As you can see, the Link components doesnt have the href="" attribute, instead, them have the to="" attribute
+
+--- How can I use the Link component in my App ---
+
+Every file where you need to work with Link components, you need to import it:
+    import { Link } from 'react-router-dom';
+

@@ -1,0 +1,4 @@
+Go to the folder call router-app inside the start folder and run: npm i .... This will install the require node modules 
+
+Install the extension call Auto Import - ES6, TS, JSX, TSX
+
