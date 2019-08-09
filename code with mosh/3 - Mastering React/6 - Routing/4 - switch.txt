@@ -1,4 +1,4 @@
-The Route component matches what is on a given URL with the value that is set on its path attribute, and every succesfull match will be render its component, to solve this messy problem, there are 2 solutions:
+The Route component matches what is on a given URL with the value that is set on its path attribute, every succesfull match will render its component, to solve this messy problem, there are 2 solutions:
 
     1.- add to each Route component after the path attribute the word exact... of this way, it'll be rendered just the component that its path value macthes exactly to  the URL...
 

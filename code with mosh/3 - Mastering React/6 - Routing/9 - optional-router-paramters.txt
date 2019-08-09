@@ -1,0 +1,14 @@
+    For make optional the router parameters, we only need to add a "?" after each parameter, of this way is how JS regular expression works...
+
+    This will allow us to call our components without the need of send to them all the parameters....
+
+
+    --- <Route path="/something/:param1?/:param2?" component={<Component />}>
+
+    
+    Remember how to read the Route parameters:
+        Them are receibed in the props object....
+
+Accesing each Route parameter....
+    --- props.match.params.nameParameter  ---
+

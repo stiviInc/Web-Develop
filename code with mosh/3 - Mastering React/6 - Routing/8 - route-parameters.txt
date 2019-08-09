@@ -1,0 +1,14 @@
+ **********************************************************************************************
+        How to define a parameter?
+    R./ We have to use ":" before the name of the parameter.... example:  /products/:id  ---> The id is the parameter of the Route Component
+    The parameters are added in the path="" attribute....
+
+        --- <Route path="/something/:nameParam" component={<Component/>}>
+
+**********************************************************************************************
+
+        How can we read parameters pass to a componnet?
+    R./ We can read them ussing the math object that is receibed in the props....
+        
+        ---    this.props.match.params.nameParameter    ---
+**********************************************************************************************

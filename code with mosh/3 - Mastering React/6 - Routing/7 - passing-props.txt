@@ -1,0 +1,22 @@
+    Remember: the Route component pass these 3 props to the component defined inside the Route component....
+    
+
+    If we need to pass aditional props to the component that will be called once the Route is activated, we can do it by calling the render attribute instead the component attribute...
+        Sintax of render attribute:
+            render={() => <Component />}
+
+    Example with code:
+
+    <Route path="" render={() => <Component prop1="" prop2="" />}>
+
+    *At this point, we can send the props that we need to the component as we have done it before, but there is a little problem, doing only this, the Route props (history,location,match) are missing, and in order for make the Route works correctly, we also need to send them... the solution is to add them in the arrow function as it props and then send them to the component with an special JSX Notation....
+        Special JSX Notation: {...props}
+    As you can see, the special JSX Notation is nothing more than just spread the props object receibed from the arrow function....
+
+
+
+**********************************************************************************************
+            So, the final result of how to send props to a component is the following:
+
+        <Route path="" render={(props) => <Component prop1="" prop2="" {...props}>}>
+**********************************************************************************************

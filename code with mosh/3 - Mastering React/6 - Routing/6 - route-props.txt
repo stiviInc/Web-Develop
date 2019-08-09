@@ -1,0 +1,11 @@
+A Route component is a wrapper around the component we are passing in its attribute component={}, if the path="" mattches the patter we have set in the path attribute, React will automatically inject the following props:
+
+    1.- history     ---> Allow us to send the usser into different pages
+    2.- location    ---> Represents the state of the app
+    3.- match       ---> Contains info about how the info in the URL match that is set in the Route component....
+
+    In simple words, the Route component pass these 3 props to the component defined inside the Route component....
+
+    for see more info:
+
+        https://reacttraining.com/react-router/core/api/location

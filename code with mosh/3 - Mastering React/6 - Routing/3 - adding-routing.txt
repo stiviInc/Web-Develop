@@ -1,7 +1,7 @@
 React is just a library responsible for rendering the view, that is why we need to install an extra library call: react-router-dom
     - Installing react-router-dom:  npm i react-router-dom@4.3.1
 
-    *** Just as general kwnoledge, there is another library call: react-router-native for handle the routing in native applications ***
+    *** Just as general knowledge, there is another library call: react-router-native for handle the routing in native applications ***
 
 After install the react-router-dom library, we need to do 2 more steps:
 

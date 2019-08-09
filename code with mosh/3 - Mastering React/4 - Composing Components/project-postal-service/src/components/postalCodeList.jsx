@@ -78,7 +78,7 @@ class PostalList extends Component {
             />
           </div>
           <div className="col-10">
-            <h3>Total Movies: {totalCounts}</h3>
+            <h3>Total Addresses: {totalCounts}</h3>
             <TablePostalCodes
               listCodePostals={listCodePostals}
               onLike={handleLike}

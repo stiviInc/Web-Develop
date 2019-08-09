@@ -2,9 +2,24 @@ import React, { Component } from "react";
 import Table from "./common/table";
 import Like from "./common/like";
 
+import { Link } from "react-router-dom";
+
 class TablePostalCodes extends Component {
   columns = [
-    { columnName: "codigo", label: "Codigo" },
+    {
+      columnName: "codigo",
+      label: "Codigo",
+      key: "link",
+      content: postalCode => (
+        <Link
+          to={`/postal-list/${postalCode.codigo}/${
+            postalCode.asentamiento.asentamiento
+          }`}
+        >
+          {postalCode.codigo}
+        </Link>
+      )
+    },
     { columnName: "asentamiento.asentamiento", label: "Asentamiento" },
     { columnName: "asentamiento.tipoAsentamiento", label: "Tipo Asentamiento" },
     { columnName: "municipio", label: "Municipio" },

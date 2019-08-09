@@ -71,18 +71,25 @@ class Movies extends Component {
   render() {
     const { length: count } = this.state.movies;
     const { pageSize, currentPage, sortColumn } = this.state;
+    const {
+      handleLike,
+      handleDelete,
+      handleSort,
+      handlePageChange,
+      handleGenreSelect
+    } = this;
 
     if (count === 0) return <p>There are no movies in the database.</p>;
 
     const { totalCount, data: movies } = this.getPagedData();
 
     return (
-      <div className="row">
+      <div className="row" style={{ marginTop: 25 }}>
         <div className="col-3">
           <ListGroup
             items={this.state.genres}
             selectedItem={this.state.selectedGenre}
-            onItemSelect={this.handleGenreSelect}
+            onItemSelect={handleGenreSelect}
           />
         </div>
         <div className="col">
@@ -90,15 +97,15 @@ class Movies extends Component {
           <MoviesTable
             movies={movies}
             sortColumn={sortColumn}
-            onLike={this.handleLike}
-            onDelete={this.handleDelete}
-            onSort={this.handleSort}
+            onLike={handleLike}
+            onDelete={handleDelete}
+            onSort={handleSort}
           />
           <Pagination
             itemsCount={totalCount}
             pageSize={pageSize}
             currentPage={currentPage}
-            onPageChange={this.handlePageChange}
+            onPageChange={handlePageChange}
           />
         </div>
       </div>

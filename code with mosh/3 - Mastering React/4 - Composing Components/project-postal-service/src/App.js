@@ -1,66 +1,44 @@
 import React, { Component } from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
+
 import PostalList from "./components/postalCodeList";
-//import NavBar from "./components/common/navbar";
+
+import NavBar from "./components/navbar";
+import AdminSection from "./components/adminSection";
+import About from "./components/about";
+import NotFound from "./components/notFound";
+import PostalCodeDetails from "./components/postalCodeDetails";
 
 class App extends Component {
   render() {
     return (
-      <main className="container">
-        {/* 
-        <NavBar
-          value={
-            listCodePostalsOriginal.filter(
-              postalCode =>
-                postalCode.asentamiento.tipoAsentamiento === "Colonia"
-            ).length
-          }
-        >
-          <span>Total de Colonias: </span>
-        </NavBar>
+      <React.Fragment>
+        <NavBar />
+        <main className="container">
+          <Switch>
+            {/*Route components*/}
+            <Route
+              path="/postal-list/:code/:asentamiento"
+              component={PostalCodeDetails}
+            />
+            <Route path="/postal-list" component={PostalList} />
+            {/*Send admin's name as a parameter to AdminSection component! */}
+            <Route
+              path="/admin"
+              render={props => (
+                <AdminSection adminName="Stalin Macias" {...props} />
+              )}
+            />
+            <Route path="/about" component={About} />
+            <Route path="/not-found" component={NotFound} />
 
-        <NavBar
-          value={
-            listCodePostalsOriginal.filter(
-              postalCode =>
-                postalCode.asentamiento.tipoAsentamiento === "Fraccionamiento"
-            ).length
-          }
-        >
-          <span>Total de Fraccionamientos: </span>
-        </NavBar>
-
-        <NavBar
-          value={
-            listCodePostalsOriginal.filter(
-              postalCode => postalCode.ciudad.zona === "Rural"
-            ).length
-          }
-        >
-          <span>Total de Zonas Rurales: </span>
-        </NavBar>
-
-        <NavBar
-          value={
-            listCodePostalsOriginal.filter(
-              postalCode => postalCode.ciudad.zona === "Urbano"
-            ).length
-          }
-        >
-          <span>Total de Zonas Urbanas: </span>
-        </NavBar>
-
-        <NavBar
-          value={
-            listCodePostalsOriginal.filter(
-              postalCode => postalCode.like === true
-            ).length
-          }
-        >
-          <span>Total de Likes: </span>
-        </NavBar>
-          */}
-        <PostalList />
-      </main>
+            {/*Redirect components*/}
+            <Redirect from="/" exact to="/postal-list" />
+            {/*if any of the above statements match with the url, redirect to not found page!*/}
+            <Redirect to="not-found" />
+          </Switch>
+        </main>
+      </React.Fragment>
     );
   }
 }

@@ -1,0 +1,23 @@
+        What is Programmatic Navigation?
+    It means we need to redirect the user when an event happens on that route.
+    For example: When a user is successfully login in, he/she will be redirected to the home page...
+
+
+        How to Navigate Programmatically?
+    To navigate programmatically we need to take the help of history object wich is passes by the react router....
+    This object has some properties, but we will focus on 2:
+
+    1.- push    ---> This property will add the old address (url) in the browser history, so you can click the back button and go back where you were....
+        The url you define inside the push("/url") will redirect the app to that url, and the actual url will be added to browser history
+
+    2.- replace ---> This property will replace the current address, so we wont add the old address to the browser history
+        The url you define inside the replace("/url") will redirect the app to that url, and the actual url will be replaced, thats why  the actual address wont be added to browser history
+        This method is commonly use in login forms, when the usser logs in correctly, there is no need to let them go back and relogi again...thats why we use the replace method, for not add the address to the browser history....
+
+
+
+
+        * Defining a push and a replace example:
+
+    props.history.push("/newAddress")
+    props.history.replace("/newAddress")

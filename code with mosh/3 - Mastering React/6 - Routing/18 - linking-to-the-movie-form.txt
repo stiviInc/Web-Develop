@@ -1,0 +1,22 @@
+    
+    * Setting the to="" property of a Link component dinamically...
+        For set the url dinamically we can type the url inside {} ("Brackets").... Remember, for insert JS code into JSX expression, we use {}
+        Example:
+        <Link to={`/url/${valDinamically}`}>
+
+        In the example above we are setting the url dinamically, the valDinamically will be set depending the value of that variable!....
+
+    
+    * Routing a dinamic url :
+        We need to create a new Route component and set in the path="" property the url plus a parameter:
+            <Route path="url/:parameter" component={Component}>
+        
+
+    * Programmatic Navigation:
+        We can create Programmatic Navigation by the onClick={()=>history.push("/url")} method....
+        
+        As you can see, we have to use the push property of the history object receibed in the props of a component!....
+
+        Remember:
+    - push("/url")      ---> Save the actual url in browser history and redirect the app to the given url
+    - replace("/url")   ---> Redirect the app to the given url without save the actual url in browser history

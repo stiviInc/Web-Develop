@@ -1,0 +1,47 @@
+    * Optional router parameters are something that you should try to avoid....
+
+    Instead of include optional parameters in the Route, you should include them in a query string...
+
+        What is a query string?
+    Query strings are added at the end of the url after a "?", you can add as much parameters as you need.... each parameter have to follow the next sintax:
+        nameParam=val
+    if you'd want to add more than one parameter, you have to add a "&" between each one....
+        nameParam1=val&nameParam2=val
+
+    Query String example:
+
+        http:/wwww.xdxd.com/page/1?sortBy=name&filterBy=type
+    
+    The Query String in the example above is the next:
+
+        ?sortBy=name&&filterBy=type
+    
+    As you can see, this query string has 2 parameters:
+        1.- sortBy
+        2.- filterBy
+    
+
+*****************************************************************************
+
+    *** How to read Query String Parameters???  ***
+    -R./ For avoid to make the process manually, we can install a library that makes that work for us....
+
+    Its very important that you know the Query Strings are receibed in the location object in its search attribute of the props object....
+            Accessing the query strings:
+            props.location.search
+
+    1.- Install query-string library:   npm i query-string@6.1.0
+
+    2.- Import the queryString module:  
+        In the each file where you will need to work with String Parameters you need to import it:    
+        import queryString from 'query-string';
+
+    3.- Use the .parse() method to get the query string parameters in a JS object!....
+        The .parse() method receibe an argument where you have to indicate where are stored the query string, in this case, them are stored in: 
+
+        const result = queryString.parse(props.location.search);
+    
+    4.- In the result object are saved each property as a property of the object, each one with its corresponding value!
+
+
+*****************************************************************************

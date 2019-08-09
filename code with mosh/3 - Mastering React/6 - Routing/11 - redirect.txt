@@ -1,0 +1,30 @@
+    Redirect can be used of 2 ways:
+    1.- For redirect to a specific component when any Route component matched:
+        * At the end of the <Route /> components add: <Redirect to="/urlToRedirect" />
+        
+        This option is normally use to redirect the url to a Not Found page or something equivalent!
+
+    2.- For redirect from an url that is not include in the Route components to another URL that has already included in some Route component:  
+    <Redirect from="/urlNotIncluded" to="/urlInclued">
+
+
+    In simple words, the Redirect component takes the given url and create a new one with the value in its to="" property....
+
+    Example:
+
+    <Redirect to="/error">
+
+    The Redirect component above will replace the given URL into a /error 
+    **************************************************************************
+
+    <Redirect from="music" to="/playlist">
+
+    The Redirect component above will replace the given URL /music into /playlist
+
+************************************************************************************
+
+Its very important to have a Route component for each Redirect component, at the end, the Redirect component will create a new URL, and its require that one Route component has defined in its  path="" attribute the URL that the Redirect component will create in order to show the desired component...
+
+    *** One last thing, import the Redirect module ****
+    *.- import {Redirect} from 'react-router-dom';
+

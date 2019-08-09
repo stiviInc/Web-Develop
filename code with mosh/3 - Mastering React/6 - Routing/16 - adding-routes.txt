@@ -1,0 +1,15 @@
+
+    When you are creating the Route Navigation remember to wrap all Route components in a Switch Component.
+    After all the Route components you can implement the Redirect Components.
+        * if you are gonna define a Redirect component to redirect from the route url ("/") remember to add the exact attribute, otherwise, all url will be redirected to the url defined in this component!
+
+    
+    *** Route component sintax ***
+    <Route path="/url" component={Component}>
+
+    *** Redirect component sintax ***
+        - Redirecting from a url to another one:
+            <Redirect from="/" exact to="url">
+            
+        -Redirecting when any Route neither Redirect components matched:    This is commonly use to redirect to an error page or not found page!
+            <Redirect to="/url-errorPage">
