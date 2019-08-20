@@ -1,0 +1,17 @@
+    With the previous implementation of the handleChange event there is a tinny error, it was implemented just to work with the usser's name input element....
+
+    Remember: if you are going to set dinamically the properties of an object, you have to use the bracket notation instead of the dot notation....
+
+    * How to handleChange of multiple inputs?
+    -R./ One solution can be by adding to the html element the attribute name and you set the same name as how it is defined the property in the state object!
+         And then in the handleChange method you access to the name attribute of that html element, and due to the name of the html and of the property defined in state object are equals, you can assign the new value at this....
+
+    ************************************************************************************
+
+         const objectWithProperties = {this.state.property};
+         objectWithProperties[e.currentTarget.name] = e.currentTarget.value;
+         this.setState( { objectWithProperties } );
+
+    ************************************************************************************
+
+    Doing this the handleChange element will work for all the properties defined in the object defined inside of the function!...

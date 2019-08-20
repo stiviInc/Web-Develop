@@ -11,11 +11,7 @@ class TablePostalCodes extends Component {
       label: "Codigo",
       key: "link",
       content: postalCode => (
-        <Link
-          to={`/postal-list/${postalCode.codigo}/${
-            postalCode.asentamiento.asentamiento
-          }`}
-        >
+        <Link to={`/postal-list/${postalCode.codigo}`}>
           {postalCode.codigo}
         </Link>
       )

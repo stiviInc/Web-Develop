@@ -1,0 +1,27 @@
+
+    This approach it'll be implemented in the validate() method:
+    
+    * Note: in the object that Joi.validate() returns there is a property call "error", if it was an error, this prop will save it, if not, the prop will be empty!
+
+    * For map the error message into something that our app can understand we need to call the prop message from the array details of the Joi object after the validation!
+
+    * The value of the path property is the name of our target property!
+
+    *   Summary of the 2 points above:
+
+
+    Note: the error.details object is an array...thats why if you want to access it properties, you need to do it with arrays sintax!...
+
+        const item0 = error.details[0]
+
+        item.message ---> error message of error number 0
+        item.path    ---> target property name of error number 0
+
+
+    * Changes to do for validate() with Joi in the onChange() method!
+
+        1.- You need to delete all the old code
+        2.- create a new errors object (empty!)
+        3.- After you call the validate method, you have to verify if the result its different to null, otherwise, return the errors object empty!...
+        4.- using a for...of loop you can assign each corresponding error message into each errors property!
+        5.- return error

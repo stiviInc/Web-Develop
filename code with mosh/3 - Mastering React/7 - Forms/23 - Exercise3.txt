@@ -1,0 +1,9 @@
+    - In the movie's page add a search box to search for movies by their title!
+        The search is not case sensitive....
+
+    Make the filter of the movies only works either with the genres or with the search box, only 1 at the time, not both!
+
+    General Instructions:
+        - if a genre was selected when the user starts to type something in the search box, the selected genre has to be clear and the filter has to be done by the title of the movie that the user is typing in the search box...
+
+        - same applies if the search box had text and the user select a genre, the search box has to be clear and make the filter by the selected genre!

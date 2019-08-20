@@ -1,10 +1,14 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
 import TablePostalCodes from "./tablePostalCodes";
 import ListGroup from "./common/listGroup";
 import Pagination from "./common/pagination";
 import { getListPostalCodes, getZones } from "../services/postalCode";
 import { paginate } from "../utils/paginate";
 import _ from "lodash";
+
+import { deletePostalCode } from "../services/postalCode";
 
 class PostalList extends Component {
   state = {
@@ -78,6 +82,13 @@ class PostalList extends Component {
             />
           </div>
           <div className="col-10">
+            <Link
+              to="postal-list/new"
+              className="btn btn-primary"
+              style={{ marginBottom: 20 }}
+            >
+              Add New Postal Code
+            </Link>
             <h3>Total Addresses: {totalCounts}</h3>
             <TablePostalCodes
               listCodePostals={listCodePostals}
@@ -112,11 +123,14 @@ class PostalList extends Component {
   };
 
   handleDelete = postalCode => {
+    //Delete it from the local state!
     this.setState({
       listCodePostals: this.state.listCodePostals.filter(postCode => {
         return postCode.codigo !== postalCode.codigo;
       })
     });
+    //Delete it from the server!
+    deletePostalCode(postalCode);
   };
 
   handleLike = postalCode => {

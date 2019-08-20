@@ -1,0 +1,52 @@
+    Sometimes, when building forms you'll need to show data given from the server, this means the state of the element need to be initialize with that data!
+
+    By default the input elements have its own states, everything is stored in its state, this is a big problem because we are not having a single source of thruth....
+    In order to solve this, we need to convert the elements into CONTROLLED elements.... by default them are UNCONTROLLED elements....
+
+    Remembeeeer... A controlled component/elements hasn't has its own state all the data is receibed by its props, them only notify the changes on the data by raising an event
+
+    * How to convert an UNCONTROLLED element into a CONTROLLED element?
+    -R./ Follow the next steps:
+
+    1.- In the state object add as much properties as you will need to handle all the data of the element!
+            state = {
+                property1: "",
+                property2: ""
+            }
+
+    2.- Add the value attribute to the html element and set its value to a property defined in the state object!
+        This will make the value of the element always coming from the property defined in the state object
+        Doing this, the html element hasn't any more its own state!
+
+            <element value={this.state.property}>
+
+    3.- Handle the onChange event of the html element....
+        each time the html element change (it can be when the user type something...) the onChange() event is rais!
+        In this handle method we have to update the corresponding property defined in the state object with the actual value of the element!
+
+        Remember: each time you update the state object cause a re-rendered, this will make the html element re-render with the update state!
+
+            <element value={this.state.property} onChange={this.handleChange}>
+
+    4.- Create the handleChange event...
+        This event(function) has to receibe an event(object) as an argument!
+        This object has a property call currentTarget wich return the html element (literally, returns the html element with all its attributes), by accessing the html element we can access to its attributes, such as name,id,value,...
+        Once we've accesed the current value of the html element, we need to update the corresponding property defined in the state object!
+
+        Note: Despite the value of the html element is managed by the property defined in the state object, each time the element suffered a change, the data goes to the state of the element, that id why you can get it ussing: currentTarget.value .... after getting the data, you update the property defined in the state object and everything is in sync!-
+
+/**********************************************************************************************/
+
+        handleChange = e =>{
+            const property = {this.state.property};  //Clonning the value's property
+            property = e.currentTarget.value;   //Accesing the current value before updating the state of the html element!
+            this.setState( { property } );      //Updating the state
+        }
+    
+    * In simple words, the handleChange works of this way!
+        1.- clon the corresponding state property
+        2.- get the html element with currentTarget and then access to its value (Everythin that is inside the element is the value, not only what makes the onChange event was executed)
+        3.- update the property defined in the state object!
+
+/***********************************************************************************************/
+

@@ -1,0 +1,31 @@
+**********************************************************************************************************************
+    In simple words, we wont keep worrying about the validation logic anymore, because everything related will be stored in the FormValidations component, we only will need to:
+
+    Steps to follow to extend form FormValidations component:
+
+        1.- Of course, we need to import the FormValidations component and after modify wich component extends the current form...
+            Instead of keep extending from Component, now it'll extend from FormValidations
+
+            class LoginForm extend ValidationForm{
+
+            }
+
+        2.- Initialize the state object in each form depending what it'll need! ---> The 2 properties that every form must have are data:{} and errors:{} because them are needly in the FormValidations component....
+
+            The data: {} property have to initialize with the  name of the inputs that you want to validate...
+            Example, if you have an input called "username", you should initilize the data property as follows:
+            state = {
+                data: {username: ""},
+                errors: {}
+            }
+
+        3.- Define the schema and the rules for each property defined in the data property of the state object!
+            Base in how the state object above was initialized, its corresponding schema would looks like this:
+            schema = {
+                username: Joi.string().required()   //This validation indicates that the username input must have a string and it cant be empty!
+            }
+        
+        4.- Determine what should happen when a form is submitted (if there wasnt any error!)   ---> doSubmit() method!
+
+        5.- Decide what to return when the form is rendered! (render() method!
+**********************************************************************************************************************

@@ -1,0 +1,20 @@
+
+    Task to do:
+
+    1.- Add a new button in movies form, when its clicked, goes to /movies/new where there will be a form with 4 inputs:
+
+            - title
+            - genre:            a list with the next genres: Action, Comedy, Thriller
+            - number in stock:  a number between 0 and 100
+            - rate:             a number between 0 and 10
+        
+    Take in mind that this form it'll be the same when we need to update (modify) a movie!.... Advice: Check the url parameter and determine if you are adding a new movie or modifing an existing one!
+
+    if the url parameter doesnt comply the condition for determine if we are adding a new movie and also its not a valid movie id or key or whatever you use for determine a valid movie, redirect the page to the: /not-found .... This task should be done in the componentDidMount() method because you will call the server once the render method has been executed...
+
+    Once the save button has been clicked:
+
+        1.- Add the new movie in the server! (consume the MoviesAPI!)
+        2.- redirect to /movies
+
+    * Fix the implementation of the handleDelete() because as it has be done, just delete the movie from the local state, not from the server!

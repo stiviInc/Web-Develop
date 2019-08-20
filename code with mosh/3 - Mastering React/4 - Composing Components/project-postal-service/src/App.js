@@ -7,7 +7,8 @@ import NavBar from "./components/navbar";
 import AdminSection from "./components/adminSection";
 import About from "./components/about";
 import NotFound from "./components/notFound";
-import PostalCodeDetails from "./components/postalCodeDetails";
+import PostalCodeForm from "./components/postalCodeForm";
+import Login from "./components/login";
 
 class App extends Component {
   render() {
@@ -17,10 +18,7 @@ class App extends Component {
         <main className="container">
           <Switch>
             {/*Route components*/}
-            <Route
-              path="/postal-list/:code/:asentamiento"
-              component={PostalCodeDetails}
-            />
+            <Route path="/postal-list/:code" component={PostalCodeForm} />
             <Route path="/postal-list" component={PostalList} />
             {/*Send admin's name as a parameter to AdminSection component! */}
             <Route
@@ -30,6 +28,7 @@ class App extends Component {
               )}
             />
             <Route path="/about" component={About} />
+            <Route path="/login" component={Login} />
             <Route path="/not-found" component={NotFound} />
 
             {/*Redirect components*/}

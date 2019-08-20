@@ -1,0 +1,26 @@
+
+    This approach will be implemented in the validatePropert() method!
+
+    There are some considerations you have to take in count:
+        1.- The way of assign dinamically the name of a property of an object is by computed properties feature implemented in ES6....
+            Example:
+                const obj = { [props.name] : props.value};
+            As you can see, the name of the property is assigned by the value that it'll be receibed in the props in the name argument!
+
+        2.- The Joi.validate() method wont take the whole input fields structured neither the whole schema object, you need to extract only the input and its corresponding rule defined in the schema object....
+            (Here will be applied computed properties)....
+        
+        3.- in this case the abortEarly option wont be modified!
+
+        4.- if result.error is null return null, otherwise return result.errors[item.path[0]];
+            Remember: inside the errors object there is an array call "details", wich some of its properties are:
+                - input, wich contains: 
+                    * message   ---> contains the error
+                    * path      ---> contains the name of the target!   (Its an array)!
+
+
+        Example:    
+            const obj = { [name]: value };
+            const schema = { [name]: this.schema[name] };
+            const result = Joi.validate(obj,schema);
+            return result.error ? result.error.details[0].message : null;

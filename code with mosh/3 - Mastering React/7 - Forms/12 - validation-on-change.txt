@@ -1,0 +1,31 @@
+    Do this task is a little bit tricky:
+
+1.- Firstable than nothing, now the validation will be made during each change...(each time a usser type something and maakes the state object updates!)
+2.- This time, you'll need to access the errors that was saved once the submited button was clicked!
+3.- Create a new method where you'll validate each input using its name and value attributes...
+    TIP: You can destructure this properties in the arguments place of the arrow function!....
+4.- Take help of the name attribute and verify wich input will you validate and throw an error in case of beeing needly!
+5.- Once you are sure you are gonna work wiht the rigth input, use the value attribute to validate the input each time the method is executed! (each keybord type!)
+6.- Dont forget to return the rigth message after each validation!
+7.- After the method execution and you have store the errorMessage, you have to make some validations:
+    //if errorMessage is truthy, add to errors object in its corresponding input.name the errorMessage
+    //otherwise, delete from errors object any prop related to the currently input!
+
+    It'll look something like this:
+
+    validate = ({name,value}) =>{
+        if (name === "username") {
+            //All validations goes here
+            if (value.trim() === "") return "Username is required!";
+            if (value.toLowerCase().includes("z"))
+            return "The username cant contain a z";
+        }
+    }
+
+
+    handleChange = ({currentTarget : input}) =>{
+        const errors = {...this.state.errors};
+        const errorMessage = validate(input);
+        if(errorMessage) error[input.name] = errorMessage;
+        else delete error[input.name];
+    }

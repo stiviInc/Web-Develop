@@ -1,0 +1,43 @@
+    What is joy?
+
+Joi is a powerful third library that allow us to validate key information....   Is a powerful validator!
+
+    See more at:
+    https://www.npmjs.com/package/joi-browser
+
+    See full documentation:
+    https://github.com/capaj/joi-browser
+
+*************************************************************************
+
+    How to install joy in my project?
+
+1.- For project browsers you need to install the version joi-browser:   --->    npm i joi-browser@13.4
+2.- import the library in each component where it'll be used:           --->    import Joi from "joi-browser"
+
+    * Define a schema object where all validation rules will be defined!
+3.- schema = {
+        namePropToValidate: //Joi-code to create the validation rule!....
+        example: Joi.string().required()    //With this statement we are validating the prop example must be an string and it cant be empty!
+    }
+
+    * Make the validation:
+4.- For make the validation, you need to call the validate() method, this method takes 2 required arguments and a third one that will be the options...
+    The options argument has be an object!
+
+        Joi.validate(objectToValidate, schema, {options})
+    
+    Example of validate using Joi with the abortEarly desactivated
+        Joi.validate(this.state.account, this.schema, {abortEarly: false});
+
+    * If your are working wiht many options for the validate() method, also you can create an object and send it instead of define all the options as tha argument directly:
+
+    const options = {abortEarly: false};
+    Joi.validate(this.state.account, this.schema, options);
+    
+    This method returns a complex object where each errorMessage is stored!
+************************************************************************
+
+Note:   By default, Joi has activated the abort early option, this means Joi will abort validation operation once an error has detected...
+        But also Joi allow us to desactivate this option....
+        {abortEarly: false}

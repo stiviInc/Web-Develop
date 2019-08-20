@@ -1,0 +1,65 @@
+    The most importan notes are the next:
+        
+    **************************************
+
+        if you will work with <select> html elements (lists), the option's array have to be defined in the state of its component, because from there it will be taken the data to send to the Select component....
+
+        So, every update to the options to be displayed, it'll be applied in the state object....
+
+            Advice: if you will need to display some info in this component in its first load, the best place to update the state object is in the componentDidMount().... firstable you ask for the info you'll display and after you update the state....
+
+    **************************************
+
+         If you will delete something of the server, firstable you need to delete it from the local state and after from the server... of this way you keep in sync the front and the back of the app   
+
+    **************************************
+
+        If you will add something to the server, you only need to update the server side correctly....
+        The state of your app will be sync with the server when the components where you have defined methods for ask info to the server....
+            * Like example:
+                After submitting a form, you only need to update the server if everything was correct, the react app will be synch with the server once the components where you display data from the server execute its methods where them ask for server's info....
+
+    **************************************
+
+        if you will need to ask info from the server to display it in a form, you will need to map it in order to convert complex objects into single objects... example:
+            Maybe in the server you can have a value stored as a complex object and you only need a specifically value, so you will map it as follows:
+
+                classroom = school.build.office.classroom
+
+        For a better example, check the method called "mapData" inside the component postalCodeForm.jsx in the postalCodeProject...
+
+    **************************************
+
+
+
+    1.- When you are working with forms you will have this pattern:
+
+        - form component:   
+    * This is the reusable component! where you can define methods for render each kind of html input element... input, select, textbox, textarea....
+    * In this component is where all the validation methods are...
+    * As an advice, if you will create a new method for render another type of iput element, try to abstract it... this means, if you will create a method for render a radio button group, you should create a new component radio button in wich you can create the corresponding structure!
+    
+
+        - appForm component:   
+    * This is the component that will extend from the from component...
+    * In this component you have to define by default in its state object the data and errors attributes that will have that form!...
+    Also you can add more attributes in case you need it...
+    * In this component is where you have to define the schema object (rules of validation!)
+    
+        * Same component can help us to add or edit things of our app... 
+        Example: if we need to add a new student or edit an student that is actually in the database, we can use the same component, because at the end the structure will be the same, same data will be needly to do any of both operations....
+        --- That is why we have to take advantage of the componentDidMount() method and the url parameters.... ---
+        * Since this method we can verify if the component was call for add new info or for edit an actual info.... How?
+        - We need to access the url parameters that are sended since the place where the component was called!
+            Sintaxis:   const parameter = this.props.match.params.nameParameter
+        Once we have the value, a simple way to determine is by a condition:
+            - commonly, when the component was called for add new info, the url looks like this: /.../new
+            So, we can verify:
+            if(paramter === "new") return;
+            else ---> ask for the info of the current object and update the data in order to display it!
+    
+
+    * Since the doSubmit() method we have to call the server to update it with the changes that have be done and also the programattic navigation is apply here!
+
+
+    

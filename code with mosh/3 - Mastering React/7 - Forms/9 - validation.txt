@@ -1,0 +1,20 @@
+
+    One easy but powerful way of validate our forms is add a new property initialize with an empty object in the state object...
+    This property will be updated after we call our validate() method... either we got an error or dont!
+    if we got an error, we shouldn't call the server, only show the error messages!
+
+
+    Remember, each time the state object is updated (setState()) a re-render is provoked!
+    
+    * Display the errors:
+
+        While the re-render is being made, is the time to display the errors (if there was at least one!)...
+        In the Input component, we need to create a conditional... if the errors prop is truthy, we have to display a div with the error message!, if the errors props is falsy, nothing should happen!
+
+            Sintax:     {props.errors && <div>props.errors</div>}
+            Remember: This sintax works of the next way:
+                if the conditional defined at the left is truthy, the JSX element will be rendered, otherwise, nothing will happen!
+
+    * Note:
+
+        This approach works once the form is submitted, this means, the validate() method need to be called since the handleSubmit() method, in the next lessons we will learn how to validate while the keys are being pressed....

@@ -1,0 +1,35 @@
+    In this occation, the extraction of code will be focused in all the logic of validations() methods... either when the form is submitted and when the onChange() method is called....
+
+    The component that will be created it doesnt render anything, its only job is to handle all the logic of validations() methods...
+    This means that this component will work only as a collection of methods for validate any form component that it'll be created...
+
+    Due to this form component wont render anything, in each form when it'll be required, the current form will inherit from this form component...
+    of this way, the new form component can access all validation methods stored in the form component!....
+
+    ............................................................................
+
+    So, we must create a new component called form.jsx, in wich we will stored all validation() methods!
+
+    Steps to follow for create this new component:
+
+        1.- Due to this component wont render anything by itself, we must delete the render() method....
+
+        2.- Initilize the state object exactly as the next structure:
+            state = {
+                data: {},
+                errors: {}
+            }
+            As you can see, both properties are empty objects, this is because the data will be managed since each component that inherit from this one, and the errors will be added and removed in execution time!
+
+        3.- Copy and modify the next methods:  
+            
+            - validate()
+            - validateProperty()
+            - handleSubmit()      ---> Inside this method you must move all the code that will be executed if there wasnt any error to a new method (doSubmit) that must be defined in each form that inherit from form component
+                Example:
+                handleSubmit = (e) =>{
+                    //Code to validate
+                    //if there wasnt any error:
+                    this.doSubmit() //---> this method have to be defined in each form....
+                }
+            - handleChange()

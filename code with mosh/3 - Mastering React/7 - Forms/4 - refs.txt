@@ -1,0 +1,37 @@
+    
+    * How to access DOM elements in React?
+    -R./ Working with vainilla JS (Pure JS) we use the document object to do it... document.getElementById()
+    In React Development, we have to avoid work with the document object, instead, if we really need to acces a document element, we have to work with refs...
+
+**************************************************************************************
+    * How to work with refs?
+
+    -R./ Follow the next steps fo create a ref to a dom element
+
+    1.- React offered us a method call createRef()...
+        So, we need to create a new ref using this method
+        Sintax:
+            nameReference = React.createRef();
+    
+    2.- In the html element we need to add a property call ref and set its value to the const that we've created!
+            <htmlElement ref={this.nameReference}>
+
+    3.- Access the actual DOM element
+        any ref have a property call current, wich returns the actual DOM element
+            const name = this.nameReference.current
+
+    4.- Access the value of the DOM element
+        Once you have access to the actual DOM element, you only need to call the .value property....
+            const name = this.nameReference.current.value
+
+**************************************************************************************
+    
+    * When to use refs?
+    -R./ There are only some specific cases for refs:
+        * Managin focus, text selection or media playback
+        * Triggering imperative animations
+        * Integrating with third-party DOM libraries
+
+    Important Note: Avoid the overuse of Refs, use them just when you know what you are doing and when there is use its indispensable....!
+
+    
