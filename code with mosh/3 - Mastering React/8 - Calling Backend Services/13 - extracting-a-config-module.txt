@@ -1,0 +1,19 @@
+
+    Create a config module can be very helpful in order to encapsulate all info that could be use in many parts of our app....
+
+    One example it could be the url where the backend calls are made... this url can be used in many parts of our app...
+
+    So... we create a new file called  "config.json"    --->    It has to be .json cause what it'll be inside its an JS Object, wich will have properties with values....
+
+    Like example, if we are encapsulating the url, our config.json file would look like this:
+
+    {
+        "url": "baseURL",
+        "anotherProp": "value"
+    }
+        * Take spetial care when you are creating the properties, because you have to defined their name inside a ""... as if you would be typing a string value!
+
+
+    As any other module, in each file where we will need to acces some info that is inside of this file, we need to import this module!
+
+    The way of accesing each property is by doth "." notation, because at the end of the day when you import this module, it'll be treath as an object!

@@ -1,0 +1,29 @@
+    What is a Toast Notification?
+        - Its a beatiful way to replace the default alert() method providen by JS...
+    
+    How to install Toast?
+        1.- Since the terminal run the next command:    ---> npm i react-toastify@▲4.1
+        2.- Mount the toast containter:                 ---> import {ToastContainer} from "react-toastify";
+                                                             inside the render() method:    
+                                                                <ToastContainer />
+        If you dont have an idea where to mount the ToastContainer, the best place is in the render method of the root file... (In the app.js) module!                                                        
+        3.- Import the css library in the same module where the ToastContainer was imported:    ---> import "react-toastify/dist/ReactToastify.css";
+        4.- In every place where you have the need to throw an alert(), you can replace it for toast and all its method that offered us....
+                                                        ---> import {toast} from "react-toastify";
+
+        5.- Replace in the code all the alert() methods for the toast method....
+            alert(msg) ---> toast(msg)
+        
+        6.- if there is the need to show a toast alert depending the kind of error, we can select one of the methods that this object offered us...
+            Some of them are:   
+                - error
+                - success
+            
+            Sintaxis:
+            nameFunction = (error) =>{
+                toast.error(error);
+                //But also you can use the toast method as a function!
+                toast(error)
+            }
+    
+    

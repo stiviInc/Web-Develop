@@ -1,0 +1,38 @@
+
+    Axios offered us two methods for update data    --->    "put" & "patch":
+        1.- put     --->   This method is used to update ALL properties (The entire object!)
+        2.- patch   --->   This method is used to update one or more properties
+
+    Sintaxis: 
+        await axios.put(url + "/" + id, obj);
+        await axios.patch(url + "/" + id, {prop1: obj.prop1, prop2: obj.prop2});
+
+    Take a look carefully, in the first paramter you have to explicity specify wich object will be updated... the most common identifier is called "id", but this could vary depending each backend service...
+
+    And also look the diferences between the put ann patch method....
+        - in put method we send the entire object
+        - in patch method we destructure the object in those properties that will be updated!
+
+
+    How to keep in sync the server with the UI? ---> Pessimistic update approach
+        - Same procedure as post method (creating data)... 
+            1.- Firstable we make the changes in the server, either with put() or patch() method
+            2.- After, we clone the state object that includes the object that was updated in the server
+            3.- We find the index of the object that was updated
+            4.- We override the clone object at the index that was gotten in step number 3, the overriden will be done by spreading the object that was updated in the server!
+            5.- We call the setState() method
+            6.- Everything is in sync!!!
+
+
+    Example:
+
+    update = async (object) => {
+        object.nameProp = "UPDATED";
+        await axios.put(url + "/" + object.id, object)
+
+        //After the server was updated, we update the UI    ---> Pessimistic update approach
+        const objects = [...this.state.objects];
+        const index = objects.indexOf(object);
+        objects[index] = {...object};
+        this.setState({objects});
+    }

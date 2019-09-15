@@ -1,0 +1,22 @@
+    There are 2 kinds of type our code when we are talking about calling backend services !
+
+    1.- Pessimistic Updates:    --->    Assumes an error could occur when calling the backend, that is why the calls are made first and then the UI is updated!
+                                        This programming styles in terms of UI experience is a little bit noisy and slowly, because nothing happen until the backend is uptaded (1 sec at least!) and it could give the impression of a slow and bad application....
+
+    2.- Optimistic Updates:     --->    This programming style assume that everything will be ok when calling backend services, that is why the UI is updated first and
+                                        after the backend...
+                                        The way of handle possible errors is:
+                                            1.- Before any change to UI or Backend, we need to create a copy of the state object that it'll be updated!
+                                            2.- After we create the copy, now we can start to make the changes that we need
+                                            3.- Once the data is ready for be updated, firstable we update the UI
+                                            4.- We define a try-catch bloque where we will make the call to the backend service....
+                                                Sintaxis:
+                                                    try{
+                                                        await axios.method();
+                                                    }catch(ex){
+                                                        //error msg
+                                                        this.setState({object: originalObject})
+                                                    }
+                                                As you can see, the call is made inside the try bloque and if something went wrong, an exception will be thrown and itll be threath in the catch clausule where the UI will be back to its previous state!...
+        
+        The Optimistic Updates gives a better User Experience and makes look a faster application!

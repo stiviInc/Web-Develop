@@ -1,0 +1,7 @@
+    In this lesson you put in practice what you learned in the previous one!
+
+    This is to create a file that works as a service for make calls to the backend!
+
+    either if the call is for get or delete data, since the method in the service file, we only return the promise that is returned by the call to the server....
+
+        * In the method of the service file we only return the promise.... we don't apply async/await to wait until the promise is resolved or rejected, those methods are applied in the method since where is being called the service!

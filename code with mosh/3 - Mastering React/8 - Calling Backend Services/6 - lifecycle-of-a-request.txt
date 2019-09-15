@@ -1,0 +1,16 @@
+
+    Every HTTP Request has a property called "Method" wich determines the intent of that request!
+        Common Methods:
+
+        1.- get     --->    Getting Data
+        2.- post    --->    Creating Data
+        3.- put     --->    Updating Data
+        4.- delete  --->    Deleting Data
+    
+
+    Whenever an application sends an AJAX Request to a different domain, the browser always send an OPTION request....
+
+
+    *** An Status Code 201 indicates a resource has been created! ***
+
+    

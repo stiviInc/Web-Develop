@@ -1,0 +1,25 @@
+    The method that axios offered us for delete data from the server is called "delete"...
+    The sintax of this method is really easy, we only need to indicate the url and the specific identifier of the object we want to delete... Exactly as the put and patch methods()
+
+
+    Sintax:
+        axios.delete(url + "/" + object.id);
+    
+
+    How to keep in sync the UI with the server?
+        - This time there are some ways of do it, but one of them is by filtering the array where the object that was removed belonged...
+
+        Steps:
+            1.- Delete the object from the server
+            2.- Create a new object that it'll filter the array where the deleted object belonged...
+            3.- Call the setState() method
+
+    Example:
+
+    delete = async (object) => {
+        //Delete in the server
+        await axios.delete(url + "/" + object.id);
+        //Filter the local array!
+        const objects = this.state.objects.filter(p => p.id !=== obecjt.id);
+        this.setState(objects);
+    }

@@ -1,0 +1,37 @@
+
+    The method that axios offered us to send data to the server is called "post"
+    This method takes at least 2 arguments:
+        1.- the url 
+        2.- the object that it'll be sended to server for being saved!
+    
+    * This method also returns a promise, so we can make an async function for receibed it!
+
+    Sintaxis for make an async function:   
+        async nameFunction(){
+
+        }
+
+    Sintaxis for make an async arrow function:
+        nameFunction = async () =>{
+
+        }
+    
+    Sintaxis of the post method:
+        const promise = axios.post("url",obj");
+
+    *********************************************
+
+    saveData = async () =>{
+        const promise = axios.post("url",obj);
+    }
+
+    *********************************************
+
+    - How to keep in sync the view with the server?
+        * Firstable you need to update the server, after you can do this easily trick:
+            1.- create a new array where you will add the object that has been stored in the server and also you will spread the array that is stored in the state object at that point....!
+                const posts = [obj, ...this.state.posts];
+            2.- update the state with the array you've created
+                this.setState({posts});
+            
+    *********************************************

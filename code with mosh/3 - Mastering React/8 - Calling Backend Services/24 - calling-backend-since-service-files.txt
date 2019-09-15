@@ -1,0 +1,24 @@
+Let's define 2 simple rules when calling services (files) that makes call to the backend!
+    1.- The service reuturns a promise: ---> In the server there's no implemented an async method!, The server just make the call to the backend!
+        * if the service returns a promise, we need to receive it as a promise :'v .... This means, we will receibe the entire promise with all its properties, so, if we want to acces the data that is inmerse in the promise, we'll need to destructure it ... const {data} = methodService();
+
+    2.- The service returns an array: ---> In the server there is implmenented an async method! The server threath the promise and returns only the data!
+        * if the service returns the data of the promise it means that the promise was already threath it, (async approach implemented!)...
+        This means that we only need to store the returns value from the service in a simple variable .... const list = methodService();
+        
+*** Super Important Note ***
+    it doesnt matter if you are following approach number 1 or approach number 2, whatever you choose, the method where you are calling the method service you'll need to convert it to an async function and apply the await prop to the call of the service method!
+
+*********************************************************************************
+    Examples: 
+    
+    Approach Number 1:
+        async method(){
+            const {data} = await methodService();
+        }
+    
+    Approach Number 2:
+        async method(){
+            const list = await methodService();
+        }
+*********************************************************************************

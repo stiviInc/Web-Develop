@@ -1,0 +1,18 @@
+    *** Implementing the Logger Service ***
+            Before anything, we need to init the Logger Service in the index.js file...
+        1.-  in index.js import and init the Logger Service:
+                ---> import Logger from "logService.js"
+        2.-  before the ReactDom.render() statement, call the init method of our Logger Service:
+                ---> Logger.init();
+        3.- In those files/components where you'll need to track the errors, import again the Logger Service:
+                ---> import Logger from "logService.js"
+        4.- Wherever you will need to track the errors call the log() method and send them the error that was thrown!
+                ---> Logger.log(error)
+        5.- The last step is to check in the Sentry Dashboard of you project if the errors are being tracked correctly!
+
+
+    What are the beneffits of create a Logger Service?
+        - All the implementation details for managing the Logs are in the same place.
+        - Anywhere you'll need to Log something, you only need to call the log() method, you dont will polute your code with code to create the Log
+        - If in the future you decide to change your Log Service Provider, you'll only need to make changes in one file!
+    

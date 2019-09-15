@@ -1,0 +1,34 @@
+
+    Before our application is launched to production enviroment we need to implement a way to loggin all errors that could be generated once the final users start to use the application, in this enviroment the console.log() is useless because the log it only be displayed in the local browser of the user....
+
+    In order to solve this problem, there are companies that provides loggin services, such as: Sentry, check the link below of its web-site!
+        https://sentry.io/welcome/
+
+    
+    How to set up Sentry in my React Project?
+    *** Creating a Log Service Reusable File ***
+        1.- Create an account in Sentry.io
+        2.- Create a new React Project in its web site
+        3.- In our React application type in the terminal the next statement:   ---> npm install @sentry/browser
+        4.- Create a new file called "logginServices.js"
+        5.- Inside this file import * from Sentry           --->    import * as Sentry from '@sentry/browser';
+        6.- Create a new function call "init" and inside of it: copy and paste the init method that is providen in the Sentry Web Site for the project that we've      
+                Example --->     
+            function init(){
+                Sentry.init({
+                    dsn: "https://249532568d964a779fd31f147fed90f3@sentry.io/1539926",
+                    release: "project-name@1.0.0"
+                    });
+            }
+        7.-  Create a new function call "log" wich receibe a parameter call "error", and inside of this function type the correct sintax that is providen by Sentry's doc in order to track any error...
+                Example --->
+            function log(error){
+                Sentry.captureException(error);
+            }
+        8.- The last step is to export this 2 methods for its future use wherever they could be used!
+                Example --->
+            export default{
+                init, 
+                log
+            }
+

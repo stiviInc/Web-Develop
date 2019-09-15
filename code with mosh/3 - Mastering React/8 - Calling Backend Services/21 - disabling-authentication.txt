@@ -1,0 +1,26 @@
+    In order to be able of send data to the backend server, we need to disable the authentication that is to true by default...
+
+    Goes to "config" folder and open "default.json" file, there is a property call "requiresAuth" and is set to true, just change it to false and everything should works!
+
+    Before start to work, we need to install "Postman" chrome extention....
+
+   
+    * Once you've installed it, lets test the "Get" method, just for test if the backend is working properly!....
+
+        1.- Open Postman
+        2.- Type the url where the server is running and also includes the extention where you want to get the data from!
+            Example: Getting data from movies!
+            http://localhost:3900/api/movies
+        3.- Check if the server returns the data!
+
+
+    * After testing the "get" method, we will send a "post" request to the server for add a new movie!
+        1.- Use the same url that you use in the example above!
+        2.- Change the "get" option to the "post" option....
+        3.- Go to "Body" section, select the "raw" option and change the format of "text" to -> "JSON(application/json)"
+        4.- Write the object we want to send, remember that JSON notation requires every key is written inside "", example:
+
+            {"key1": "value1", "key2": "value2"}
+        5.- Click the Send button, if you did everything correct, you should not get any error!
+
+        

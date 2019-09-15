@@ -1,0 +1,18 @@
+    Remember: React is library that it only task is to keep in sync the DOM and the state of the app....
+    
+    React doesnt care how you make the call to the backend.... that is why you are free to use the library with you feel more comfortable....
+
+    There are 3 populars ways to call backend services:
+        1.- fetch
+        2.- jQuery AJAX
+        3.- axios           ---> We are going to work with this one!
+
+    
+    axios is the most popular librarie for React Applications....
+
+    How to Install Axios?
+
+        1.- Since the terminal, run the next command:                                                   --->    npm i axios@0.18
+        2.- In each component where we will make a call to the backend service, we need to import it:   --->    import axios from "axios";
+
+        

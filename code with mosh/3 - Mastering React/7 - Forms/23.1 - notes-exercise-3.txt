@@ -1,0 +1,7 @@
+    The search box it is a controlled component, this means all its data is receibed by its props, and also it doesnt have its own state, everything is managed since the outter and notify changes by raising events!
+
+
+    Remember: When you are working with controlled elements or controlled components you cant use null or undefined to set its values!... React throws an error if you do it!...
+
+    The search box component needs to receibe the value and the onChange() in order to work properly...
+

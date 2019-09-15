@@ -1,0 +1,61 @@
+
+    Due to any axios method that returns something could throw an unexpected error, we need to implement some way to handle all this possible errors in the same place...
+    By good luck, axios also offered us a simple solution for deal with this problem... wich is called "interceptors"
+
+    This method has two options:
+        1.- request     --->    This will intercept every call that it'll be made to the server!
+        2.- response    --->    This will intercept every response wich is the result of any call to the server!
+
+    For handling unexpected errors, we have to work with the response method, and its use() method...
+
+        * use() method:
+            This method takes 2 parameters that have to be called as an arrow function:
+                1.- success     ---> This function is called whenever the response is successful    --- if we dont want to handle the success attempts, we only need to send null in this parameter!
+                2.- error       ---> This function is called whenever the response got an error!
+
+    Sintaxis:
+
+        axios.interceptors.response.use(null, error => {
+
+        })
+
+    Implementation:
+        Remember that all status error in the 400's range are expected errors, so, if we want to handle just the unexpected errors, we need to make a validation to ignore any expected error that could be thrown and just focus in the unexpected errors....
+
+        so, if the error is an unexpected error, make the log and show the usser a generic message!
+
+        After everything, either if it was an unexpected or an expected error, we have to return a rejected Promise in order to redirect the control flow to the corresponding catch statement where was made the call to the server!....
+
+                How to return a rejected Promise?
+                    - return Promise.reject(error);
+
+    ******************************************************************************
+
+    Super Important Note:
+
+        This method has to be created as a global method (OUT OF THE CLASS SCOPE)
+
+        Like this: 
+
+            axios.interceptors.response.use(null, error => {
+
+            });
+            
+            class....{
+
+            }
+
+    Full Example:
+
+    axios.interceptors.response.use(null, error => {
+        const expectedError = error.response && error.response.status >= 400 && error.response.status < 500;
+
+        if(!expectedError){
+            console.log("unexpected error", error);
+            alert("An unexpected error ocurred");
+        }
+
+        return Promise.reject(error);
+    })
+
+    ******************************************************************************

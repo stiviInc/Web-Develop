@@ -1,0 +1,20 @@
+    Imagine how bad practice it would be to copy/paste the axios.interceptor... in every file where we need to call the backend...
+
+    A easy way to perform our code its by creating a new service where we define the interceptor() method and we exported the axios methods....
+    Of this way, in the rest of our app, we only will need to import this service and use the exported values without the need of worry if we are using axios or even how the errors will be intercepted....
+
+
+    In simple words, we will create a new JS file where we will encapsulate all the handling errors and calling backend logic!
+
+    This means... we will move the axios.interceptors.... method to this file and also we will export the axios methods to call the backend:
+
+        export default {
+            get: axios.get,
+            post: axios.post,
+            put: axios.put,
+            patch: axios.patch,
+            delete: axios.delete
+        };
+    
+    Of this way, we only need to import this module in those files where we will make calls to the backend and we wont need to implement the axios.interceptors method in each file....
+

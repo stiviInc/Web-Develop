@@ -1,0 +1,21 @@
+    Due to the database was created a time ago, some dependencies are deprecated or even removed....
+    That is why we need to follow the next step in order to be able of work with it!
+
+
+    1.- run the npm i command
+    2.- Install Windows Build Tools:
+        * Open a terminal with Administrator Rigths and enter into project's folder
+            - npm install --global --production windows-build-tools
+    3.- Instal "bcrypt" module:
+        * Open a terminal with Administrator Rigths and enter into project's folder
+            - Install yarn
+            - yarn add bcrypt@3.0.0
+    4.- Instal node-gyp:
+        * Open a terminal with Administrator Rigths and enter into project's folder
+            - npm install -g node-gyp
+    5.- run again the npm i command
+    6.- run the npm audafix... command
+    7.- node seed.js
+    8.- node index.js
+
+    If everything went good, at this point the backend has been setting up correctly!

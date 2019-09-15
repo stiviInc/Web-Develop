@@ -1,0 +1,19 @@
+    Before start making calls to the backend, there are some configurations we have to do....
+
+1.- Define the url ... There are many options, but the most elegant is:
+    - Create a new file called "config.json" and inside of it, create a new JS Object with the property "ulr" and as value the address where the backend server is running, Example:
+        {"baseURL": "localhost:3900/api/"}
+
+    Here we are creating the baseURL wich will be prepended to the url of each table where data is stored!
+
+    This is very helpful, because we will only need to define the "relative path" in each module depending from in wich tabla the data we need is stored!...
+    Example:
+    Let's supose I need to get data from the movies table
+        baseURL: "localhost:3900/api/"  ---> It'll be prepended to url value!
+        url: "/movies"                  ---> It'll be added to baseURL for complete the URL where the data is stored!
+    As you can see, we only need to specify the missing url info for get the data from the movies table!
+
+    *** Another option for specify the URL where the data should be taken/send is by appending the url after the baseURL inside the axios call:
+        axios.method(baseURL + "/" + "missingURL")....
+
+2.- 

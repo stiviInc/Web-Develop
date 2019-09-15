@@ -1,0 +1,41 @@
+
+    In the last lesson you learned that for handleing errors, you have to wrap the code into a try-catch statement....
+
+    There are 2 kinds of errors:
+        * Expected Errors:      ---> The status of this error is between the range of 400's (404: not found, 400: bad request)... 
+                                    This kind of errors are also known as CLIENT ERRORS 
+            How to threat them?
+        - You should display a specific error message depending on what error was thrown...
+
+        * Unexpected Errors:    ---> This errors are not supposed to happen, like example: (network down, server down, db down, bug)...
+        
+            How to threat them?
+        - Log them
+        - Display a generic and friendly error message... this means to show the same message for any Unexpected Error may appear...
+
+    *** It is very important to mention that either occurs and Expected or Unexpected error, if you implemented a Optimistic Update Style, you'll need to restart the UI to its previous state ***
+
+****************************************************
+
+        How to know what type of error was thrown?
+        * Error 404: Not Found:
+    - if the property "response" of the object that is catch in the catch clausule is true and the state property its equals to 404 we are dealing with a 404 error...
+      otherise we may be dealing with an Unexpected Error...
+
+      Example:
+
+      try{
+        await axios.method();
+      }catch(ex){
+          if(ex.response && ex.response.status === 404) alert("The resource was not found!");
+          else{
+              console.log("Loggin error", error);
+              alert("An Unexpected Error ocurred!");
+          }
+          //Return the UI to its previous state
+          this.setState({obj : previosObj});
+
+      }
+
+
+****************************************************

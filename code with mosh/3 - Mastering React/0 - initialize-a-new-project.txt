@@ -5,14 +5,14 @@
 4.- Install the version 4.7.0 of font awesome:  --->                    npm i font-awesome@4.7.0
 5.- Import font awesome in index.js:    --->                            import "font-awesome/css/font-awesome.css";
 
-**********************************************************************
-lodash:
+**************************************************************************************************************************************
+lodash: ---> manipulate arrays and objects very easy!
 
     1.- Since the terminal type the next command:                                                           --->    npm i lodash@4.17.10
     2.- Once the installation is done, in each file where you will need lodash, import it of the next way:  --->    import _ from "lodash";
 
-**********************************************************************
-route:
+**************************************************************************************************************************************
+route:  ---> Route
 
         React is just a library responsible for rendering the view, that is why we need to install an extra library call: react-router-dom
         - Installing react-router-dom:  npm i react-router-dom@4.3.1
@@ -44,8 +44,56 @@ route:
 
                 <Route path="/products" component={Products} />
 
-*******************************************************************
-How to install joy in my project?
+**************************************************************************************************************************************
+How to install joy in my project?   ---> Validations
 
-1.- For project browsers you need to install the version joi-browser:   --->    npm i joi-browser@13.4
+1.- For browsers project you need to install the version joi-browser:   --->    npm i joi-browser@13.4
 2.- import the library in each component where it'll be used:           --->    import Joi from "joi-browser"
+
+**************************************************************************************************************************************
+
+How to install axios in my projec?  ---> Call backend services
+
+1.- Since the terminal you need to run the next command:    ---> npm i axios@0.18
+2.- In each component where we will make a call to the backend service, we need to import it:   --->    import axios from "axios";
+
+**************************************************************************************************************************************
+
+How to install Toast?   ---> Beatiful alert notifications
+
+1.- Since the terminal run the next command:    ---> npm i react-toastify@▲4.1
+2.- Mount the toast containter:                 ---> import {ToastContainer} from "react-toastify";
+                                                        inside the render() method:    
+                                                        <ToastContainer />
+If you dont have an idea where to mount the ToastContainer, the best place is in the render method of the root file... (In the app.js) module!                                                        
+3.- Import the css library in the same module where the ToastContainer was imported:    ---> import "react-toastify/dist/ReactToastify.css";
+4.- In every place where you have the need to throw an alert(), you can replace it for toast and all its method that offered us....
+                                                ---> import {toast} from "react-toastify";
+
+5.- Replace in the code all the alert() methods for the toast method....
+    alert(msg) ---> toast(msg)
+
+6.- if there is the need to show an toast alert depending the kind of error, we can select one of the methods that this object offered us...
+    Some of them are:   
+        - error
+        - success
+    
+    Sintaxis:
+    nameFunction = (error) =>{
+        toast.error(error);
+        //But also you can use the toast method literrally as a function!
+        toast(error)
+    }
+
+
+**************************************************************************************************************************************
+
+How to install and set up a Log Service Provider?   ---> Log Service
+
+    - Check the document call
+        * "15 - loggin-services.txt"    ---> Explains how to install and set up Sentry in our project
+        * "16 - logger-service.txt"     ---> Explains how to implement and work with the logger service we've configured in the previous file!
+
+    a good log service Provider is Sentry:  https://sentry.io/
+**************************************************************************************************************************************
+

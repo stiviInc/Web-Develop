@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 import TablePostalCodes from "./tablePostalCodes";
 import ListGroup from "./common/listGroup";
 import Pagination from "./common/pagination";
+import SearchBox from "./common/searchBox";
+
 import { getListPostalCodes, getZones } from "../services/postalCode";
+import { deletePostalCode } from "../services/postalCode";
 import { paginate } from "../utils/paginate";
 import _ from "lodash";
-
-import { deletePostalCode } from "../services/postalCode";
 
 class PostalList extends Component {
   state = {
@@ -16,8 +17,9 @@ class PostalList extends Component {
     zones: [],
     itemsPerPage: 3,
     currentPage: 1,
-    selectedZone: undefined, //The filtering will be made by the selectedZone
-    sort: { columnName: "codigo", order: "asc" } //This object will be used to sort the table...
+    selectedZone: null, //The filtering will be made by the selectedZone
+    sort: { columnName: "codigo", order: "asc" }, //This object will be used to sort the table...
+    searchQuery: ""
   };
 
   //Initialize the arrays listCodePostals and zones once the render method() is executed by first time
@@ -31,15 +33,25 @@ class PostalList extends Component {
       listCodePostals: listCodePostalsOriginal, //listCodePostalsOriginal is a local array in the render() method....
       itemsPerPage,
       currentPage,
-      selectedZone
+      selectedZone,
+      searchQuery
     } = this.state; //Destructuring state object...
 
-    const filteredCodePostals =
-      selectedZone && selectedZone._id !== 0
-        ? listCodePostalsOriginal.filter(postalCode => {
-            return postalCode.ciudad.zona === selectedZone.name;
-          })
-        : listCodePostalsOriginal;
+    let filteredCodePostals = listCodePostalsOriginal;
+    if (searchQuery !== "") {
+      filteredCodePostals = listCodePostalsOriginal.filter(postalCode => {
+        return postalCode.codigo
+          .toLowerCase()
+          .startsWith(searchQuery.toLocaleLowerCase());
+      });
+    } else {
+      filteredCodePostals =
+        selectedZone && selectedZone._id !== 0
+          ? listCodePostalsOriginal.filter(postalCode => {
+              return postalCode.ciudad.zona === selectedZone.name;
+            })
+          : listCodePostalsOriginal;
+    }
 
     const { columnName, order } = this.state.sort;
 
@@ -59,7 +71,14 @@ class PostalList extends Component {
   }
 
   render() {
-    const { itemsPerPage, currentPage, selectedZone, zones, sort } = this.state; //Destructuring state object...
+    const {
+      itemsPerPage,
+      currentPage,
+      selectedZone,
+      zones,
+      sort,
+      searchQuery
+    } = this.state; //Destructuring state object...
 
     const {
       handleDelete,
@@ -90,6 +109,11 @@ class PostalList extends Component {
               Add New Postal Code
             </Link>
             <h3>Total Addresses: {totalCounts}</h3>
+            <SearchBox
+              value={searchQuery}
+              onChange={this.handleSearch}
+              placeholder="Search by postal code"
+            />
             <TablePostalCodes
               listCodePostals={listCodePostals}
               onLike={handleLike}
@@ -110,12 +134,17 @@ class PostalList extends Component {
   }
 
   //handle methods()
+
   handleSorting = sortColumn => {
     this.setState({ sort: sortColumn });
   };
 
   handleSelectedZone = zone => {
-    this.setState({ selectedZone: zone, currentPage: 1 });
+    this.setState({ selectedZone: zone, currentPage: 1, searchQuery: "" });
+  };
+
+  handleSearch = query => {
+    this.setState({ searchQuery: query, selectedZone: null, currentPage: 1 });
   };
 
   handlePageChange = page => {

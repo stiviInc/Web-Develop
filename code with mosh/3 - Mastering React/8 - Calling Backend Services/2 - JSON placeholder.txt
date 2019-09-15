@@ -1,0 +1,6 @@
+    https://jsonplaceholder.typicode.com/
+
+    this site is a REST API for simulate a fake backend service....
+
+
+    An util extension in chrome for work with JSON Data is called: "JSON Viewer"... it gives a pretty format to JSON Data!

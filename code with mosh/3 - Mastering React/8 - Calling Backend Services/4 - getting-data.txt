@@ -1,0 +1,39 @@
+
+    The best moment for make backend calls is when the componentDidMount() method is executed, remember, this method is executed after the first render of the component has be done!
+
+
+    Get Data:
+
+    Axios offer us a method call "get"... this method receibes as a parameter the url where the HTTP request will be send, and what this method returns is a promise...
+
+    What is a Promise?
+        - A Promise is an object that hold the result of a asynchronous operation!
+
+    What is an asynchronous operation?
+        - An asynchronous operation is an operation that will be completed in the future...
+
+    States of a Promise?
+        - When the promise is created, it first state is pending!
+        - After the promise is executed it can change either resolved (succes) OR rejected (failure)
+    
+    How to access the values of a Promise?
+        - The old way was using the .then() method, but in modern JS we can do it by defining an async function and implementing the await statement:
+
+    How works an async function?
+        - An async function returns a Promise element, when the async function returns a value, the Promise is resolve with the returned value, but if the function throws an exception, the promise will reject the value!
+        - An async function can contains an expresion call "await"
+    
+    What does the await expresion do?
+        - This expression makes a pause until the promise is either resolved or rejected...
+    
+    *** Sintax for an async function ***
+
+        //Example with a get called
+        async nameFunction (){
+            const promise = await axios.get("ul");  //As you can see, the await expresion goes before the http call is made!
+                                                    //This is because the .get() method returns a promise, and the await method makes the corresponding pause until the promise is completed
+            console.log(promise);
+        }
+
+    * Where is stored the data?
+        - The data is stored in the property called "data" of the promise that .get() method returns!
