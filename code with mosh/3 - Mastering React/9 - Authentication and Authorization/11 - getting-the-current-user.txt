@@ -1,0 +1,24 @@
+*** Decoding a JSON Web Token ***
+For decode a JWT we can use libraries, in this project we will use "jwt-decode library"
+
+    * Install jwt-decode library
+1.- Type the next command:                  --->    npm i jwt-decode@2.2.0
+2.- Import the function that decodes a JWT  --->    import jwtDecode from 'jwt-decode';
+3.- When the function will be used, we need to send it a JWT....
+    3.1 - Get the JWT that is stored in the localStorage
+        const jwt = localStorage.getItem("token'sKeyName");
+    3.2 - Send the jwt to the function
+        const data = jwtDecode(jwt);
+
+    3.3 - Prevent exception when there is not JWT in the localStorage
+        * If we try to get a token from the localStorage but there is nothing and then we send that object to the function to decode it, the app will throw an exception....
+        That is why we have to wrap the code of point 3 in a try-catch block.....
+
+*********************************************************************
+
+            When to decode a JWT?
+Anytime you need to get the data that is encrypted in the JWT....
+For login or logout services decode a JWT is not needly....
+It could be more useful when you need to get some data that is in the JWT, like example the username, email, or any data that is encrypted and you need to do something with it!
+
+*********************************************************************

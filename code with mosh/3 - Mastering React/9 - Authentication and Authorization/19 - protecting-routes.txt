@@ -1,0 +1,21 @@
+    The logic behind this task ii is to validate if the one who is trying to access the path of the route is an authenticated user.
+        If the user is not authenticated, the route it'll be redirected to the login page
+        If the user  is authenticated, then the route will show the Component that it is supposed to show!
+
+    
+    Protecting a route it is an important task to prevent unauthorized users can access Components that they are not supposed to have access to.
+
+    Protecting the route we will need to use the render method instead of calling directly the Component.
+    
+    Instead of using the component attribute, we are going to use the render attribute because with it we can pass a function and in that function we can check if the current user is null or is an authenticated user
+
+    
+    Like Example:
+
+        <Route
+            path="/movies/:id"
+            render={props => {
+            if (!this.state.user) return <Redirect to="/login"></Redirect>;
+            else return <MovieForm {...props}></MovieForm>;
+            }}
+        />

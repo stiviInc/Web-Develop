@@ -1,0 +1,19 @@
+    What is a JSON web token?
+A JSON Web Token is generated in the server indicating the user's privileges and send it to the client!
+Once the client has received the token, it can use it for prove what privileges have the current user
+The token has the signature of the server, so, both, client and server can verify that the token is legitim
+
+*********************************************************************
+
+A JSON Web Token is compound of three sections:
+    - HEADER            --->    This section defines the algorithm that was used to generate the token and the Token Type
+    - PAYLOAD           --->    This section has all the data of the token, (All the info that is returned by the server)
+    - VERIFY SIGNATURE  --->    This section is purely the signature, The programmer can't do anything with this... is manipulated by the server itself!
+
+*********************************************************************
+
+*** Decoding a JSON Web Token ***
+As I mentioned in the text above, the PAYLOAD section has the data that the server is returning, a programmer can decode that section and extract the data in order to work with it!
+The data is stored as an object.... "key":"value"
+
+*********************************************************************

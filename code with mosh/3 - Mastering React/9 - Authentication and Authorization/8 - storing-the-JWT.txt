@@ -1,0 +1,12 @@
+*** Storing the JSON Web Token ***
+
+Every browser has a local database called "localstorage" in which you can save temporary data!
+
+That is what we are going to do, save the JWT in there!
+
+// Saving something in the localstorage
+localStorage.setItem("key", "value");
+    As you can see, this method takes 2 strings as parameteres
+
+//Checking the localstorage in the browser
+    For check what the localstorage has, we can do it in the option Application -> Storage -> Local Storage of the chrome development tools

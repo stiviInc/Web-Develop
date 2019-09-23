@@ -1,0 +1,36 @@
+At this point in our application if we want to modify a movie and if the user is not loggin it redirects to the login form, and once the user is loggin it is redirected to the movies page instead of the movies form!
+
+This is a really bad practice, the best practice it would be to redirect the user where they want to go... 
+Like example, if I want to see an specific shirt but I have to loggin first, once I loggin, I would be redirected to the shirt's page I want to see, no to the general  page of all shirts....
+
+In order to achieve this goal, we have to add more data to the <Redirect /> component that is calling the login form!
+For our luck, once we try to access a page that is Protected and needs to be authenticated, before the Redirect component loads the Login Form, in its props there is a property call location where it is an attribute call "pathname", this attribute has the current location before we were redirected to the login page!
+    This is the location where the application should be redirected after the user loggs in....
+
+            Object Tree:
+    Object -> location -> pathname
+
+
+*** The <Redirect /> component offer us the possibilite to send data as an object, which have 3 attributes:
+    - pathname  ---> The url where the page will be redirected with the Redirect component
+    - search
+    - state     ---> This attribute let us send extra data to the component we are redirecting the user to!
+
+            Example:
+    <Redirect
+        to={{
+            pathname: "/login",
+            search: "?utm=your+face",
+            state: { referrer: currentLocation }
+        }}
+    />
+            * This <Redirect /> component will be received as an object in the component where it is pointing
+
+* Accesing the state object that has send to the component where the <Redirect> is pointing can be accessed via this.props.location.state in the redirected-to component.
+
+
+*** SEE THE OFICIAL DOCUEMNTATION IN THE LINK BELOW ***
+https://reacttraining.com/react-router/web/api/Redirect/to-object
+
+
+

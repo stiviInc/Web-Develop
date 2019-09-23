@@ -1,0 +1,22 @@
+
+    When we work with Route components there are 2 essentiallty attributes:
+        - The Path
+        - A component or the render attribute
+
+    Creating an extractable component that will be aware of the current user and dependending on it, show a component o redirect to the login page will need to receive:
+        - Path
+        - Component
+        - render method()
+        - other props that the component may require for render correctly
+    
+    * This component will receive a Component and a render method just in case if the Component is null, the render method it'll be load instead!
+
+    * The rest of the props will be spread in the Route component not in the Component neither the render attribute that it was received by the method
+
+    *** Its output will be a standar Route react component ***
+
+
+
+
+
+Remember:   React expects that the component's name starts with a Capital Letter....

@@ -1,0 +1,5 @@
+The content of this section will cover is the following:
+    - JSON Web Tokens
+    - Calling Protected APIs ---> This are endpoints that require the user to login and have certain permissions
+    - Showing / Hiding Elements depending on the user's permissions
+    - Protecting Routes ---> Users can not navigate to certain parts of the applications if they are not logging or if they not have the permissions to do it

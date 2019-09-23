@@ -1,0 +1,6 @@
+    The endpoint to make an authentification request in this app is:
+        /auth
+    
+ 
+    If the authentification process is completed successfully, the server will return a JSON Web Token, which will be used for making future calls to the server!
+    Otherwise, the server will return what is wrong with the call we made

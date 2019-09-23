@@ -1,0 +1,8 @@
+
+The login form should be accessible just when the user is not login....
+
+That is why we have to validate that if the user is currently login, the component redirects the user to the main page, otherwise, if the user is not login, loads the login form component.....
+
+
+    How can we do it?
+-It's quite simple, in the render() method of the login form we call the auth.getCurrentUser() and if it is currently login, we Redirect the user to the main page, if not, we let the login form components render and display to the user!

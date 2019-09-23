@@ -1,0 +1,27 @@
+At this point, our application has some little details...
+The logic for logging and logout its spread in various components, this shouldn't be like that, we should encapsulate it in one single place, and the best place to do it is in the authService file, because there we have already called the server asking if the data provided for make a logging matches with some user that is registered in the DB... after the user is saved, the server returns a promise where a JWT its contain, so we can take advantage of it and use that response in the same function without need to spread the login info to the component where this server is being called
+
+
+So, in the authService we will encapsulate all the logic for logging and logout tasks. This means that we will save the token in the localStorage in this authService...
+
+
+
+
+**********************************************************************
+
+        Exporting various functions as an object and not export each function as default:
+Export an object where each function could be accesible is a greath way to do the exporting task....
+
+export default{
+    function1,
+    function2,
+    function3
+}
+
+Doing of this way the export it'll means that for access any function, you will need to do it with object notation.....
+//Import the default object with the functions....
+import nameObject from "nameService";
+//Accesing X function
+nameObject.nameFunction
+
+**********************************************************************

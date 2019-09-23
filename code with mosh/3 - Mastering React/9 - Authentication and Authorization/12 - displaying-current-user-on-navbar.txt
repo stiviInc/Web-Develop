@@ -1,0 +1,44 @@
+    In this app we will implement the next possible scenarios:
+1.- An anonymous user is on the web page       ---> In this case, the user has to see the options to login and register on the navbar
+2.- An user has been login into the web page    ---> In this case, the user has to see its name and a logout option on the navbar 
+                                                     * When the user clicks on its name, it'll be redirected to its profile
+                                                     * When the user click on the logout option, it'll be log out of the app!
+
+
+*******     Displaying the correct interface depending the current user   ****
+For achieve the app displays what it is suposed to show on the navbar based on the current user we have to add a conditional in that component....
+{/*This is the case when the user is not log in*/}
+{!data && (
+    <React.Fragment>
+        <Component to show>
+        <Component to show>
+    </React.Fragment>
+)
+}
+
+{/*This is the case when the user is log in*/}
+{data && (
+    <React.Fragment>
+        <Component to show>
+        <Component to show>
+    </React.Fragment>
+)
+}
+
+This is a simple and easy way to do it, but depending on each application, you may have to code depending the privileges the user has, but you can follow this same approach just adapting what you need
+
+
+*******     Fixing the way of redirect when the user register or log into its account   ****
+
+* The current way of redirect the user to the main page after he has been either registered or logged in is using the history object ---> Remember, with this implementation the page doesn't suffer a reload!
+
+* We have to change this implementation for one that let us reload the entire app in order to let the App.js file update the entire tree with the JWT's data
+    The way of achieve it is using the window.location="/component";
+
+        - In this case we want to redirect the app to the main page, so the will look like this:
+            window.location="/";
+
+        
+************************************************************************
+In summary:
+    Replace the this.props.history.push("/") for window.location = "/";

@@ -1,0 +1,25 @@
+The server returns headers after a "post" call, this header contains information about the result of the call.
+Any header that starts with "x" it'll be treated as a "custom header" which are not part of the http protocol
+
+    Buuut, before continuous, what is a HTTP Header?
+        * HTTP headers are the code that transfers data between a Web server and a browser. 
+        * HTTP headers are mainly intended for the communication between the server and client in both directions.
+
+
+There is a little problem with custom headers, by its own them can't be read in the browser, we have to create a new standard header that it will display the content of the custom header....
+
+    Example:
+ 
+.header("x-auth-token",token)                               //This a custome header
+.header("access-control-expose-headers", "x-auth-token")    //Creating a standard http header for let the client read the custom header
+
+
+After updating the backend service to make custom headers can be read in the browser, we need to access these headers....
+In a http request, headers are in the promise that is returned by the server!
+
+
+    Example of how to access the value of the header we have just created!
+
+const response = await registerUser(this.state.data);               //Saving the result of the server
+localStorage.setItem("token", response.headers["x-auth-token"]);    //Accesing the specifically header we need and save it in the localStorage....
+

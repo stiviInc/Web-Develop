@@ -1,0 +1,31 @@
+    A Protected API is those that requires to be authenticated to make any operation on it!
+
+***********************************************************
+
+        * Status Code that indicates you are Unauthorized to make an operation!
+The status code that is returned after an http request that indicates you are Unauthorized to make any change is the 401....
+Whenever we receive a 401 code it means the server need to receive a JWT to authorize any petition
+
+***********************************************************
+        * How to send a JWT in each call that it will be made to the server?
+JWT has to be send in the "default headers" of any HTTP Request...
+
+    * How to do it if you are working with axios?
+- It's quite simple, in the service where axios is configured, we need to add the axios.defaults.headers.common option....
+    *** Sintaxis ***
+
+axios.defaults.headers.common['nameOfTheHeader'] = token's value;
+
+* For this project, the above statement it'll looks like this:
+axios.default.headers.common['x-auth-token'] = tokensValue....
+
+The tokens value it must be get since the auth service instead of getting it from the localStorage.... remember, all the code around the authentifications it must be encapsulate in the auth service!...
+
+
+        soooooooooooooooo, the final implementation it will looks like this:
+
+        axios.defaults.headers.common['x-auth-token'] = auth.getJWT();
+
+
+
+***********************************************************

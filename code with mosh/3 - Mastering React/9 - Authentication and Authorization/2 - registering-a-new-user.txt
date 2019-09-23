@@ -1,0 +1,11 @@
+    The backend of this application it'll return two possible states:
+        - 200 if everything went right
+        - 400 if an user has already been registered
+    
+    For making calls to the backend we need an endpoint where the users will be registered.
+    These calls will use the "post" method
+
+    In this specific application, to register an user, we need to send the next data:
+        - email
+        - password
+        - name
