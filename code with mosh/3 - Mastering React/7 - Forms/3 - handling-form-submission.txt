@@ -1,11 +1,11 @@
-    
+
     The default action of a form when is submitting is to reload all the page, this is a behavior we have to avoid in React Applications...
-    
+
     * How to avoid the reload page when a form is submitted?
-    -R./ form html element has a method call onSubmit={}, with wich we can call a function to replace its default behavior and make that only call the server, save the changes and redirect the usser to another page without the need of reload the whole page!
+    -R./ form html element has a method call onSubmit={}, with which we can call a function to replace its default behavior and make that only call the server, save the changes and redirect the usser to another page without the need of reload the whole page!
 
     * How to stop the default behavior when a form is submitted?
-    -R./    The function that it'll be called when the form will be submitted has to receibe an argument, that argument will reference the event.....
+    -R./    The function that it'll be called when the form will be submitted has to receive an argument, that argument will reference the event.....
             That event has a method call: preventDefault() , with this event we totally stop the default behavior when a form is submitted....
 
 *********************************************************************************************************************
@@ -14,11 +14,11 @@
         handleSubmit = e =>{
             e.preventDefault();
 
-            //Call the server, save changes and redirect usser to another page without relaod the whole page!
+            //Call the server, save changes and redirect user to another page without reload the whole page!
         }
-        
+
         <form onSubmit={this.handleSubmit}>
 
         </form>
-        
+
 *********************************************************************************************************************

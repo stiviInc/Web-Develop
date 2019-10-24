@@ -1,11 +1,11 @@
 
-    One easy but powerful way of validate our forms is add a new property initialize with an empty object in the state object...
-    This property will be updated after we call our validate() method... either we got an error or dont!
+    One easy but powerful way of validate our forms is add a new property and initialize it with an empty object in the state object...
+    This property will be updated after we call our validate() method... either we got an error or don't!
     if we got an error, we shouldn't call the server, only show the error messages!
 
 
-    Remember, each time the state object is updated (setState()) a re-render is provoked!
-    
+    Remember, each time the state object is updated (setState()) a re-render is caused!
+
     * Display the errors:
 
         While the re-render is being made, is the time to display the errors (if there was at least one!)...

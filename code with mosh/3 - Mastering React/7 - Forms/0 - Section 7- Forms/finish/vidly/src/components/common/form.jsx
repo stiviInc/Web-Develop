@@ -42,6 +42,7 @@ class Form extends Component {
     if (errorMessage) errors[input.name] = errorMessage;
     else delete errors[input.name];
 
+    //Despite if an error was thrown or not, the form element has to be updated, because the user has to see in screen what it's typing!
     const data = { ...this.state.data };
     data[input.name] = input.value;
 

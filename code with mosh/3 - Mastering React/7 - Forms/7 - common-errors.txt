@@ -1,7 +1,8 @@
     Super Important: undefined and null can't be used as values in a Controlled Element!
 
-    if you initialize an Uncontrolled Element and after a onChange() you try to make it a Controlled Element, React will throw a warning...
-    This happen when the property that is supposed to control the value of the element is not defined in the state object... so, when the onChange() method is called and try to update the value with an undefined or null, React will recognice this element as an Uncontrolled Element and will warn you that you can't change it from Uncontrolled to a Controlled element!
+    if you initialize an Uncontrolled Element and after an onChange() you try to make it a Controlled Element, React will throw a warning...
+    This happen when the property that is supposed to control the value of the element is not defined in the state object...
+    so, when the onChange() method is called and try to update the value with an undefined or null, React will recognize this element as an Uncontrolled Element and will warn you that you can't change it from Uncontrolled to a Controlled element!
 
 
     Summary:

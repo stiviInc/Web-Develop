@@ -1,4 +1,4 @@
-    In this occation, the extraction of code will be focused in all the logic of validations() methods... either when the form is submitted and when the onChange() method is called....
+    This time, the extraction of code will be focused in all the logic of validations() methods... either when the form is submitted and when the onChange() method is called....
 
     The component that will be created it doesnt render anything, its only job is to handle all the logic of validations() methods...
     This means that this component will work only as a collection of methods for validate any form component that it'll be created...
@@ -21,8 +21,8 @@
             }
             As you can see, both properties are empty objects, this is because the data will be managed since each component that inherit from this one, and the errors will be added and removed in execution time!
 
-        3.- Copy and modify the next methods:  
-            
+        3.- Copy and modify the next methods:
+
             - validate()
             - validateProperty()
             - handleSubmit()      ---> Inside this method you must move all the code that will be executed if there wasnt any error to a new method (doSubmit) that must be defined in each form that inherit from form component

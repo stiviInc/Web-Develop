@@ -2,7 +2,7 @@
     This means that our form component will store the logic of validation() methods and also will be able to return a submit button and as many inputs as the method in charge of return them!
 
     So, let's do it....
-    
+
     * The first task is create the method that will return the submit button...
 
         1.- renderButton(label){
@@ -14,24 +14,24 @@
             }
         As you can see, the only element that could change between each submit button in any form it is the label....
 
-    * The second task is create the method that will return an Input Component!... 
+    * The second task is create the method that will return an Input Component!...
         This time, the arguments will be the name, label and type of each input....
 
         2.- renderInput(name, label, type: "text"){
                 return (
-                    <Input 
+                    <Input
                         type={type}
                         name={name}
                         value={data.name}
                         onChange={this.handleChange}
                         errors={errors.name}
                         label={label}
-                    >   
+                    >
                 );
             }
         - Remember that each input element is created based in an Input Component
 
-    * In the Input Component, you can apply to them the rest operator in the arguments....
+    * In the Input Component, you can apply the rest operator in the arguments....
       Once you are adding attributes to the input element, you only will need to add the rest operator...
       Adding the rest operator, all its properties will be add to the input element....
 
