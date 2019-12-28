@@ -23,23 +23,23 @@ route:  ---> Route
 
         1.- In the index.js file we need to import the component {BrowserRouter}:
                 import {BrowserRouter} from 'react-router-dom';
-        
+
             After importing, we need to wrap the component that is being rendered in the ReactDom.render(<Component/>, doc....) in a <BrowserRouter> component
 
             It'll looks like this:
                 ReactDom.render(<BrowserRouter><Component/></BrowserRouter>,docu....);
-            
+
         2.- Register our Route, this means that we will tell react what component should be rendered based on a given url...
 
                 For render a component based on a given url, we need to use the Route Component....
                 For be able of use the Rout component, we need to import it:
 
                     import {Route} from 'react-router-dom';
-                
+
                 After importing the Route component, we need to register the Route components, this basically means we need to define Route components and assign their corresponding attributes... it has 2 attributes that it'll be passed as props:
                     1.- path=""         ---> The url
                     2.- component={}    ---> The component that sould be rendered base on the url
-            
+
             Example: If you want to render the Products component based on its url, it'll looks like this:
 
                 <Route path="/products" component={Products} />
@@ -61,11 +61,11 @@ How to install axios in my projec?  ---> Call backend services
 
 How to install Toast?   ---> Beatiful alert notifications
 
-1.- Since the terminal run the next command:    ---> npm i react-toastify@▲4.1
+1.- Since the terminal run the next command:    ---> npm i react-toastify@4.1
 2.- Mount the toast containter:                 ---> import {ToastContainer} from "react-toastify";
-                                                        inside the render() method:    
+                                                        inside the render() method:
                                                         <ToastContainer />
-If you dont have an idea where to mount the ToastContainer, the best place is in the render method of the root file... (In the app.js) module!                                                        
+If you dont have an idea where to mount the ToastContainer, the best place is in the render method of the root file... (In the app.js) module!
 3.- Import the css library in the same module where the ToastContainer was imported:    ---> import "react-toastify/dist/ReactToastify.css";
 4.- In every place where you have the need to throw an alert(), you can replace it for toast and all its method that offered us....
                                                 ---> import {toast} from "react-toastify";
@@ -74,10 +74,10 @@ If you dont have an idea where to mount the ToastContainer, the best place is in
     alert(msg) ---> toast(msg)
 
 6.- if there is the need to show an toast alert depending the kind of error, we can select one of the methods that this object offered us...
-    Some of them are:   
+    Some of them are:
         - error
         - success
-    
+
     Sintaxis:
     nameFunction = (error) =>{
         toast.error(error);
@@ -96,4 +96,3 @@ How to install and set up a Log Service Provider?   ---> Log Service
 
     a good log service Provider is Sentry:  https://sentry.io/
 **************************************************************************************************************************************
-
